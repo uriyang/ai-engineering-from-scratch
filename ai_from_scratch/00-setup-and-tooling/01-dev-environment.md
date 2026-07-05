@@ -15,7 +15,7 @@ Blender 렌더링이나 그래픽 연산을 빠르게 할 때 활용해요.
 
 예를 들어 PyTorch에서는 이렇게 사용해요.
 
-```
+```text
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model = model.to(device)
 data = data.to(device)
