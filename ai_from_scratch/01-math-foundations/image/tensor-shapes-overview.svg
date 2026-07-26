@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560">
+  <defs>
+    <style>
+      .bg { fill: #faf7f0; }
+      .title { fill: #111827; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 36px; font-weight: 700; }
+      .subtitle { fill: #374151; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 22px; }
+      .panel { fill: #fffbe8; stroke: #c7b96a; stroke-width: 2; rx: 16; ry: 16; }
+      .inner { fill: #ede9ff; stroke: #9d8cff; stroke-width: 2; rx: 10; ry: 10; }
+      .head { fill: #111827; font-family: Georgia, "Times New Roman", serif; font-size: 24px; font-weight: 700; }
+      .body { fill: #111827; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 18px; }
+      .body-small { fill: #111827; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 15px; }
+      .mono { fill: #111827; font-family: "Menlo", "Consolas", monospace; font-size: 20px; }
+      .label { fill: #1f2937; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 18px; font-weight: 600; }
+      .frame { fill: none; stroke: #d1d5db; stroke-width: 2; rx: 18; ry: 18; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1280" height="560"/>
+  <text class="title" x="40" y="56">딥러닝에서 텐서의 형태</text>
+  <text class="subtitle" x="40" y="96">관계에 따라 서로 다른 데이터 유형은 특정 텐서 형태에 매핑된다.</text>
+
+  <rect class="frame" x="36" y="138" width="1208" height="314" rx="18" ry="18"/>
+
+  <!-- Weight -->
+  <rect class="panel" x="74" y="176" width="300" height="236"/>
+  <text class="head" x="224" y="208" text-anchor="middle">Weight</text>
+  <rect class="inner" x="114" y="228" width="220" height="136"/>
+  <text class="body-small" x="128" y="258">Linear: (out, in)</text>
+  <text class="body-small" x="128" y="286">Conv2D: (out_c, in_c,</text>
+  <text class="body-small" x="128" y="306">kH, kW)</text>
+  <text class="body-small" x="128" y="334">Embedding: (vocab, dim)</text>
+
+  <!-- Attention -->
+  <rect class="panel" x="406" y="176" width="224" height="236"/>
+  <text class="head" x="518" y="208" text-anchor="middle">Attention</text>
+  <rect class="inner" x="440" y="228" width="156" height="126"/>
+  <text class="body" x="518" y="262" text-anchor="middle">(B, H, T, D)</text>
+  <text class="body" x="518" y="294" text-anchor="middle">16, 12, 128, 64</text>
+
+  <!-- NLP -->
+  <rect class="panel" x="690" y="176" width="224" height="236"/>
+  <text class="head" x="802" y="208" text-anchor="middle">NLP</text>
+  <rect class="inner" x="724" y="228" width="156" height="126"/>
+  <text class="body" x="802" y="262" text-anchor="middle">(B, T, D)</text>
+  <text class="body" x="802" y="294" text-anchor="middle">16, 128, 768</text>
+
+  <!-- Vision -->
+  <rect class="panel" x="974" y="176" width="224" height="236"/>
+  <text class="head" x="1086" y="208" text-anchor="middle">Vision</text>
+  <rect class="inner" x="1008" y="228" width="156" height="126"/>
+  <text class="body" x="1086" y="262" text-anchor="middle">(B, C, H, W)</text>
+  <text class="body" x="1086" y="294" text-anchor="middle">32, 3, 224, 224</text>
+
+  <text class="label" x="40" y="500">PyTorch는 보통 NCHW(채널 우선), TensorFlow는 기본적으로 NHWC(채널 마지막)를 쓴다.</text>
+  <text class="label" x="40" y="530">레이아웃이 맞지 않으면 속도가 느려지거나 shape 에러가 생길 수 있다.</text>
+</svg>
