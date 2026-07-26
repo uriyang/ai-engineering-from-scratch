@@ -22,7 +22,7 @@
 
 - NumPy는 텐서 연산을 빠르고 간단하게 해준다
 - PyTorch는 여기에 autograd와 GPU 지원이 더해진다
-- shape 의미는 거의 같아서, 기본 개념을 알면 PyTorch 코드도 읽기 쉬워진다
+- 두 라이브러리는 shape를 해석하는 방식이 거의 같아서, 기본 개념을 알면 PyTorch 코드도 읽기 쉬워진다
 
 ## 텐서 연산과 신경망
 
@@ -30,7 +30,7 @@
 - attention은 projection, reshape, transpose, einsum으로 구성된다
 - batch norm과 softmax도 결국 텐서 연산과 reduction의 조합이다
 
-즉, 딥러닝 모델의 대부분은 텐서 연산의 조합이다.
+즉, 딥러닝 모델의 대부분은 텐서 연산으로 이루어져 있다.
 
 ## 딥러닝에서 텐서의 형태
 
@@ -82,7 +82,6 @@
 ## broadcasting
 
 - broadcasting은 서로 다른 shape를 맞춰서 계산하는 규칙이다
-- broadcasting은 서로 다른 shape의 텐서를 규칙에 맞게 맞춰서 계산하는 방법이다
 - 오른쪽부터 축을 맞추고, 같거나 1인 차원끼리만 함께 계산할 수 있다
 - 작은 텐서를 복사하지 않고 큰 텐서에 자동으로 펼쳐 쓴다
 
@@ -92,13 +91,12 @@
 
 ## einsum
 
-- einsum은 텐서 연산을 쓰는 표기법(범용 텐서 연산)이다
-- einsum은 축을 문자로 표시해서 텐서 연산을 쓰는 방법이다
+- einsum은 축을 문자로 표시해서 텐서 연산을 쓰는 표기법이다
 - 같은 문자인데 출력에 없는 축은 합쳐진다
 - dot product, matrix multiply, outer product, trace, batch matmul, attention score를 한 줄로 표현할 수 있다
 
 쉽게 말하면:
-- einsum은 텐서 연산의 “공식 언어”다
+- einsum은 텐서 연산을 적는 “공식 언어”다
 
 자주 쓰는 형태:
 - `i,i->` : 내적
