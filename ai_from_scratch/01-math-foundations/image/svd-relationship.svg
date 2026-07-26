@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <defs>
+    <style>
+      .bg { fill: #f8f3ea; }
+      .box { fill: #ffffff; stroke: #2d2d2d; stroke-width: 2; rx: 18; ry: 18; }
+      .accent { fill: #edf4ff; stroke: #3b82f6; stroke-width: 2; rx: 18; ry: 18; }
+      .label { fill: #1f2937; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 26px; font-weight: 600; }
+      .small { fill: #374151; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 20px; }
+      .math { fill: #111827; font-family: "Menlo", "Consolas", monospace; font-size: 24px; font-weight: 600; }
+      .arrow { stroke: #111827; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+      .note { fill: #6b7280; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: 18px; }
+    </style>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#111827" />
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="520" />
+
+  <text class="label" x="60" y="50">SVD는 입력 쪽 방향과 출력 쪽 방향을 따로 본다</text>
+
+  <rect class="box" x="70" y="90" width="210" height="90" />
+  <text class="label" x="120" y="128">입력 공간</text>
+  <text class="small" x="105" y="160">벡터 v가 들어감</text>
+
+  <rect class="accent" x="350" y="90" width="120" height="90" />
+  <text class="math" x="395" y="144">A</text>
+
+  <rect class="box" x="520" y="90" width="210" height="90" />
+  <text class="label" x="560" y="128">출력 공간</text>
+  <text class="small" x="545" y="160">벡터 u가 나옴</text>
+
+  <path class="arrow" d="M280 135 L350 135" />
+  <path class="arrow" d="M470 135 L520 135" />
+
+  <text class="note" x="300" y="116">V^T</text>
+  <text class="note" x="490" y="116">U</text>
+
+  <rect class="box" x="130" y="270" width="240" height="110" />
+  <text class="math" x="205" y="318">A^T A</text>
+  <text class="small" x="170" y="352">입력 쪽에서 중요한 방향</text>
+
+  <rect class="box" x="830" y="270" width="240" height="110" />
+  <text class="math" x="895" y="318">A A^T</text>
+  <text class="small" x="865" y="352">출력 쪽에서 중요한 방향</text>
+
+  <path class="arrow" d="M475 180 C475 230, 300 230, 250 270" />
+  <path class="arrow" d="M720 180 C720 230, 900 230, 950 270" />
+
+  <text class="note" x="240" y="255">고유벡터 = V</text>
+  <text class="note" x="900" y="255">고유벡터 = U</text>
+
+  <text class="label" x="70" y="455">한 줄로 보면: A는 입력 방향 v를 출력 방향 u로 보내며, 그 크기를 σ만큼 바꾼다.</text>
+</svg>
