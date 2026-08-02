@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520">
+  <defs>
+    <style>
+      .bg { fill: #f7f5ee; }
+      .title { font: 700 30px Arial, sans-serif; fill: #1f2937; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #4b5563; }
+      .card { fill: #fffdf7; stroke: #d1c8aa; stroke-width: 2; rx: 18; }
+      .name { font: 700 28px Arial, sans-serif; fill: #111827; }
+      .kind { font: 18px Arial, sans-serif; fill: #6b7280; }
+      .line { stroke: #9ca3af; stroke-width: 2; }
+      .bullet { font: 20px Arial, sans-serif; fill: #374151; }
+      .small { font: 17px Arial, sans-serif; fill: #4b5563; }
+      .tag { font: 700 16px Arial, sans-serif; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="520" rx="24"/>
+  <text class="title" x="40" y="48">집합, 문자열, 분포를 비교하는 대표 거리들</text>
+  <text class="subtitle" x="40" y="80">무엇을 비슷하다고 볼지에 따라 Jaccard, 편집 거리, KL, Wasserstein이 각각 다른 역할을 한다.</text>
+
+  <g transform="translate(35,115)">
+    <rect class="card" x="0" y="0" width="320" height="350" rx="18"/>
+    <rect x="20" y="20" width="96" height="28" rx="14" fill="#f59e0b"/>
+    <text class="tag" x="38" y="41">집합</text>
+    <text class="name" x="20" y="90">Jaccard</text>
+    <text class="kind" x="20" y="120">겹침 비율</text>
+    <line class="line" x1="20" y1="140" x2="300" y2="140"/>
+    <text class="bullet" x="20" y="175">• 태그 / 카테고리 비교</text>
+    <text class="bullet" x="20" y="210">• 단어 존재 여부</text>
+    <text class="bullet" x="20" y="245">• 중복 문서 탐지</text>
+    <text class="small" x="20" y="300">집합형 데이터에 잘 맞는다.</text>
+  </g>
+
+  <g transform="translate(370,115)">
+    <rect class="card" x="0" y="0" width="320" height="350" rx="18"/>
+    <rect x="20" y="20" width="96" height="28" rx="14" fill="#3b82f6"/>
+    <text class="tag" x="36" y="41">문자열</text>
+    <text class="name" x="20" y="90">Edit Distance</text>
+    <text class="kind" x="20" y="120">삽입 / 삭제 / 치환</text>
+    <line class="line" x1="20" y1="140" x2="300" y2="140"/>
+    <text class="bullet" x="20" y="175">• 철자 교정</text>
+    <text class="bullet" x="20" y="210">• 오타 보정</text>
+    <text class="bullet" x="20" y="245">• DNA 정렬</text>
+    <text class="small" x="20" y="300">문자를 하나씩 바꾸는 비용을 센다.</text>
+  </g>
+
+  <g transform="translate(705,115)">
+    <rect class="card" x="0" y="0" width="320" height="350" rx="18"/>
+    <rect x="20" y="20" width="96" height="28" rx="14" fill="#8b5cf6"/>
+    <text class="tag" x="42" y="41">분포</text>
+    <text class="name" x="20" y="90">KL Divergence</text>
+    <text class="kind" x="20" y="120">정보 손실</text>
+    <line class="line" x1="20" y1="140" x2="300" y2="140"/>
+    <text class="bullet" x="20" y="175">• VAE / RLHF</text>
+    <text class="bullet" x="20" y="210">• 지식 증류</text>
+    <text class="bullet" x="20" y="245">• 출력 분포 맞추기</text>
+    <text class="small" x="20" y="300">비대칭이라 진짜 거리는 아니다.</text>
+  </g>
+
+  <g transform="translate(1040,115)">
+    <rect class="card" x="0" y="0" width="320" height="350" rx="18"/>
+    <rect x="20" y="20" width="120" height="28" rx="14" fill="#10b981"/>
+    <text class="tag" x="34" y="41">분포 이동</text>
+    <text class="name" x="20" y="90">Wasserstein</text>
+    <text class="kind" x="20" y="120">질량 이동 비용</text>
+    <line class="line" x1="20" y1="140" x2="300" y2="140"/>
+    <text class="bullet" x="20" y="175">• GAN 학습</text>
+    <text class="bullet" x="20" y="210">• 분포가 안 겹칠 때</text>
+    <text class="bullet" x="20" y="245">• Optimal transport</text>
+    <text class="small" x="20" y="300">분포가 멀어도 의미 있는 값을 준다.</text>
+  </g>
+</svg>

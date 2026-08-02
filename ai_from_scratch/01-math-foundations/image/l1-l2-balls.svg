@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420">
+  <defs>
+    <style>
+      .bg { fill: #f8f6ef; }
+      .panel { fill: #fffdf7; stroke: #c9c1a3; stroke-width: 2; rx: 18; }
+      .title { font: 700 28px Arial, sans-serif; fill: #1f2937; }
+      .label { font: 20px Arial, sans-serif; fill: #374151; }
+      .axis { stroke: #6b7280; stroke-width: 3; }
+      .grid { stroke: #e5e7eb; stroke-width: 1.5; }
+      .shape1 { fill: rgba(255, 209, 102, 0.28); stroke: #d97706; stroke-width: 5; }
+      .shape2 { fill: rgba(125, 211, 252, 0.24); stroke: #0284c7; stroke-width: 5; }
+      .formula { font: 700 26px Arial, sans-serif; fill: #111827; }
+      .small { font: 18px Arial, sans-serif; fill: #4b5563; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1100" height="420" rx="24"/>
+
+  <rect class="panel" x="30" y="25" width="500" height="365" rx="18"/>
+  <rect class="panel" x="570" y="25" width="500" height="365" rx="18"/>
+
+  <text class="title" x="80" y="70">L1: Manhattan / Diamond ball</text>
+  <text class="title" x="620" y="70">L2: Euclidean / Circle ball</text>
+
+  <g transform="translate(80,95)">
+    <line class="grid" x1="170" y1="30" x2="170" y2="280"/>
+    <line class="grid" x1="20" y1="155" x2="320" y2="155"/>
+    <line class="axis" x1="170" y1="35" x2="170" y2="275"/>
+    <line class="axis" x1="30" y1="155" x2="310" y2="155"/>
+    <polygon class="shape1" points="170,75 255,155 170,235 85,155"/>
+    <text class="formula" x="112" y="320">||x||₁ = |x₁| + |x₂|</text>
+    <text class="small" x="105" y="350">축 방향을 더 많이 허용하지 않는 모양</text>
+  </g>
+
+  <g transform="translate(620,95)">
+    <line class="grid" x1="170" y1="30" x2="170" y2="280"/>
+    <line class="grid" x1="20" y1="155" x2="320" y2="155"/>
+    <line class="axis" x1="170" y1="35" x2="170" y2="275"/>
+    <line class="axis" x1="30" y1="155" x2="310" y2="155"/>
+    <circle class="shape2" cx="170" cy="155" r="80"/>
+    <text class="formula" x="112" y="320">||x||₂ = √(x₁² + x₂²)</text>
+    <text class="small" x="90" y="350">모든 방향을 고르게 보는 둥근 모양</text>
+  </g>
+</svg>

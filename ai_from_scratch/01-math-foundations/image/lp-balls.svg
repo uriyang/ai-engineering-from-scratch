@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <defs>
+    <style>
+      .bg { fill: #f7f5ee; }
+      .panel { fill: #fffdf7; stroke: #cfc6a8; stroke-width: 2; rx: 18; }
+      .title { font: 700 26px Arial, sans-serif; fill: #1f2937; }
+      .label { font: 700 20px Arial, sans-serif; fill: #374151; }
+      .formula { font: 18px Arial, sans-serif; fill: #4b5563; }
+      .axis { stroke: #9ca3af; stroke-width: 2; }
+      .shape1 { fill: rgba(245, 158, 11, 0.24); stroke: #d97706; stroke-width: 4; }
+      .shape2 { fill: rgba(59, 130, 246, 0.20); stroke: #2563eb; stroke-width: 4; }
+      .shape3 { fill: rgba(16, 185, 129, 0.18); stroke: #059669; stroke-width: 4; }
+      .shape4 { fill: rgba(168, 85, 247, 0.16); stroke: #7c3aed; stroke-width: 4; }
+      .shape5 { fill: rgba(239, 68, 68, 0.16); stroke: #dc2626; stroke-width: 4; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1200" height="420" rx="24"/>
+  <text class="title" x="40" y="46">Lp 노름은 p 값에 따라 모양이 달라진다</text>
+
+  <g transform="translate(35,70)">
+    <rect class="panel" x="0" y="0" width="220" height="300" rx="18"/>
+    <text class="label" x="84" y="36">p = 1</text>
+    <text class="formula" x="61" y="58">L1 (diamond)</text>
+    <line class="axis" x1="110" y1="80" x2="110" y2="245"/>
+    <line class="axis" x1="35" y1="163" x2="185" y2="163"/>
+    <polygon class="shape1" points="110,95 158,163 110,231 62,163"/>
+  </g>
+
+  <g transform="translate(275,70)">
+    <rect class="panel" x="0" y="0" width="220" height="300" rx="18"/>
+    <text class="label" x="84" y="36">p = 2</text>
+    <text class="formula" x="57" y="58">L2 (circle)</text>
+    <line class="axis" x1="110" y1="80" x2="110" y2="245"/>
+    <line class="axis" x1="35" y1="163" x2="185" y2="163"/>
+    <circle class="shape2" cx="110" cy="163" r="68"/>
+  </g>
+
+  <g transform="translate(515,70)">
+    <rect class="panel" x="0" y="0" width="220" height="300" rx="18"/>
+    <text class="label" x="84" y="36">p = 4</text>
+    <text class="formula" x="56" y="58">더 네모에 가까움</text>
+    <line class="axis" x1="110" y1="80" x2="110" y2="245"/>
+    <line class="axis" x1="35" y1="163" x2="185" y2="163"/>
+    <path class="shape3" d="M110 98 C140 98, 162 127, 162 163 C162 199, 140 228, 110 228 C80 228, 58 199, 58 163 C58 127, 80 98, 110 98 Z"/>
+  </g>
+
+  <g transform="translate(755,70)">
+    <rect class="panel" x="0" y="0" width="220" height="300" rx="18"/>
+    <text class="label" x="84" y="36">p → inf</text>
+    <text class="formula" x="49" y="58">L-infinity (square)</text>
+    <line class="axis" x1="110" y1="80" x2="110" y2="245"/>
+    <line class="axis" x1="35" y1="163" x2="185" y2="163"/>
+    <rect class="shape4" x="60" y="105" width="100" height="116" rx="4"/>
+  </g>
+
+  <g transform="translate(995,70)">
+    <rect class="panel" x="0" y="0" width="170" height="300" rx="18"/>
+    <text class="label" x="53" y="36">요약</text>
+    <text class="formula" x="18" y="80">p가 커질수록</text>
+    <text class="formula" x="18" y="106">모양은 점점</text>
+    <text class="formula" x="18" y="132">네모에 가까워집니다.</text>
+    <text class="formula" x="18" y="188">L1은 꼭짓점이</text>
+    <text class="formula" x="18" y="214">도드라지고,</text>
+    <text class="formula" x="18" y="240">L∞는 축에 평행한</text>
+    <text class="formula" x="18" y="266">정사각형이 됩니다.</text>
+  </g>
+</svg>

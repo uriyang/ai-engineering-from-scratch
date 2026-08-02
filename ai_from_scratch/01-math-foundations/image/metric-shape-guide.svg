@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="950" viewBox="0 0 1600 950">
+  <defs>
+    <style>
+      .bg { fill: #f7f5ee; }
+      .title { font: 700 34px Arial, sans-serif; fill: #111827; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #4b5563; }
+      .card { fill: #fffdf7; stroke: #d8cfb3; stroke-width: 2; rx: 20; }
+      .name { font: 700 28px Arial, sans-serif; fill: #111827; }
+      .desc { font: 18px Arial, sans-serif; fill: #4b5563; }
+      .tag { font: 700 16px Arial, sans-serif; fill: #ffffff; }
+      .axis { stroke: #9ca3af; stroke-width: 2; }
+      .shape1 { fill: rgba(245, 158, 11, 0.24); stroke: #d97706; stroke-width: 4; }
+      .shape2 { fill: rgba(59, 130, 246, 0.18); stroke: #2563eb; stroke-width: 4; }
+      .shape3 { fill: rgba(16, 185, 129, 0.18); stroke: #059669; stroke-width: 4; }
+      .shape4 { fill: rgba(139, 92, 246, 0.18); stroke: #7c3aed; stroke-width: 4; }
+      .shape5 { fill: rgba(239, 68, 68, 0.14); stroke: #dc2626; stroke-width: 4; }
+      .small { font: 16px Arial, sans-serif; fill: #6b7280; }
+      .big { font: 20px Arial, sans-serif; fill: #111827; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1600" height="950" rx="24"/>
+  <text class="title" x="40" y="50">모양을 보면 어떤 거리를 쓸지 감이 온다</text>
+  <text class="subtitle" x="40" y="82">데이터의 모양이 다르면, 잘 맞는 거리도 달라진다. 아래 그림은 자주 나오는 대표적인 경우를 보여준다.</text>
+
+  <!-- Row 1 -->
+  <g transform="translate(35,115)">
+    <rect class="card" x="0" y="0" width="360" height="250" rx="20"/>
+    <rect x="20" y="18" width="82" height="26" rx="13" fill="#f59e0b"/>
+    <text class="tag" x="35" y="37">희소</text>
+    <text class="name" x="20" y="76">L1</text>
+    <text class="desc" x="20" y="104">축에 딱 붙은 sparse shape</text>
+    <line class="axis" x1="120" y1="130" x2="120" y2="210"/>
+    <line class="axis" x1="50" y1="170" x2="210" y2="170"/>
+    <polygon class="shape1" points="120,136 176,170 120,204 64,170"/>
+    <text class="big" x="220" y="150">다이아몬드 모양</text>
+    <text class="small" x="220" y="180">한두 축이 중요하고</text>
+    <text class="small" x="220" y="205">이상치에 덜 민감할 때</text>
+  </g>
+
+  <g transform="translate(405,115)">
+    <rect class="card" x="0" y="0" width="360" height="250" rx="20"/>
+    <rect x="20" y="18" width="82" height="26" rx="13" fill="#2563eb"/>
+    <text class="tag" x="35" y="37">균일</text>
+    <text class="name" x="20" y="76">L2</text>
+    <text class="desc" x="20" y="104">둥글고 고르게 퍼진 cloud</text>
+    <line class="axis" x1="120" y1="130" x2="120" y2="210"/>
+    <line class="axis" x1="50" y1="170" x2="210" y2="170"/>
+    <circle class="shape2" cx="120" cy="170" r="56"/>
+    <text class="big" x="220" y="150">원 모양</text>
+    <text class="small" x="220" y="180">모든 축을 비슷하게</text>
+    <text class="small" x="220" y="205">볼 때 자연스럽다</text>
+  </g>
+
+  <g transform="translate(775,115)">
+    <rect class="card" x="0" y="0" width="360" height="250" rx="20"/>
+    <rect x="20" y="18" width="112" height="26" rx="13" fill="#7c3aed"/>
+    <text class="tag" x="34" y="37">방향 중심</text>
+    <text class="name" x="20" y="76">Cosine</text>
+    <text class="desc" x="20" y="104">길이보다 방향이 의미 있을 때</text>
+    <line class="axis" x1="120" y1="130" x2="120" y2="210"/>
+    <line class="axis" x1="50" y1="170" x2="210" y2="170"/>
+    <line x1="68" y1="192" x2="170" y2="128" stroke="#7c3aed" stroke-width="6" stroke-linecap="round"/>
+    <line x1="84" y1="188" x2="182" y2="140" stroke="#c084fc" stroke-width="4" stroke-linecap="round"/>
+    <line x1="66" y1="126" x2="182" y2="182" stroke="#7c3aed" stroke-width="6" stroke-linecap="round"/>
+    <text class="big" x="220" y="150">각도 기반</text>
+    <text class="small" x="220" y="180">텍스트 / 임베딩 /</text>
+    <text class="small" x="220" y="205">추천 시스템에 자주 사용</text>
+  </g>
+
+  <g transform="translate(1145,115)">
+    <rect class="card" x="0" y="0" width="420" height="250" rx="20"/>
+    <rect x="20" y="18" width="126" height="26" rx="13" fill="#10b981"/>
+    <text class="tag" x="34" y="37">상관관계</text>
+    <text class="name" x="20" y="76">Mahalanobis</text>
+    <text class="desc" x="20" y="104">기울어진 ellipse를 보는 거리</text>
+    <line class="axis" x1="145" y1="130" x2="145" y2="210"/>
+    <line class="axis" x1="75" y1="170" x2="235" y2="170"/>
+    <ellipse class="shape3" cx="145" cy="170" rx="82" ry="38" transform="rotate(-25 145 170)"/>
+    <text class="big" x="270" y="150">공분산 반영</text>
+    <text class="small" x="270" y="180">상관관계가 있거나</text>
+    <text class="small" x="270" y="205">이상치를 찾을 때</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g transform="translate(70,390)">
+    <rect class="card" x="0" y="0" width="430" height="250" rx="20"/>
+    <rect x="20" y="18" width="86" height="26" rx="13" fill="#0ea5e9"/>
+    <text class="tag" x="38" y="37">집합</text>
+    <text class="name" x="20" y="76">Jaccard</text>
+    <text class="desc" x="20" y="104">겹침 비율이 핵심</text>
+    <circle cx="150" cy="160" r="56" fill="rgba(14,165,233,0.15)" stroke="#0ea5e9" stroke-width="4"/>
+    <circle cx="210" cy="160" r="56" fill="rgba(245,158,11,0.15)" stroke="#f59e0b" stroke-width="4"/>
+    <text class="big" x="285" y="150">교집합 / 합집합</text>
+    <text class="small" x="285" y="180">태그, 카테고리,</text>
+    <text class="small" x="285" y="205">presence/absence 데이터</text>
+  </g>
+
+  <g transform="translate(520,390)">
+    <rect class="card" x="0" y="0" width="430" height="250" rx="20"/>
+    <rect x="20" y="18" width="102" height="26" rx="13" fill="#ef4444"/>
+    <text class="tag" x="36" y="37">문자열</text>
+    <text class="name" x="20" y="76">Edit Distance</text>
+    <text class="desc" x="20" y="104">바꾸는 횟수를 센다</text>
+    <text class="big" x="30" y="168">kitten → sitting</text>
+    <text class="small" x="30" y="198">삽입 / 삭제 / 치환</text>
+    <text class="small" x="30" y="224">철자 교정, 오타 보정, DNA 정렬</text>
+  </g>
+
+  <g transform="translate(970,390)">
+    <rect class="card" x="0" y="0" width="580" height="250" rx="20"/>
+    <rect x="20" y="18" width="92" height="26" rx="13" fill="#8b5cf6"/>
+    <text class="tag" x="40" y="37">분포</text>
+    <text class="name" x="20" y="76">KL / Wasserstein</text>
+    <text class="desc" x="20" y="104">분포 차이와 질량 이동</text>
+    <text class="big" x="30" y="156">KL: “얼마나 다르게 생겼나”</text>
+    <text class="small" x="30" y="186">비대칭, 정보 손실 관점, VAE / RLHF / distillation</text>
+    <text class="big" x="30" y="226">Wasserstein: “얼마나 옮겨야 하나”</text>
+    <text class="small" x="320" y="226">GAN, 분포가 안 겹칠 때 유용</text>
+  </g>
+
+  <!-- bottom note -->
+  <text class="subtitle" x="40" y="708">정리하면, 데이터의 “모양”이 다르면 거리도 달라진다. 동그란 구름에는 L2, 축에 붙은 희소 데이터에는 L1, 기울어진 타원에는 Mahalanobis, 방향이 중요한 벡터에는 cosine이 잘 맞는다.</text>
+</svg>
