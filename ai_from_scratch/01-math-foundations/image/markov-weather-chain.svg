@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="460" viewBox="0 0 760 460" role="img" aria-labelledby="title desc">
+  <title id="title">날씨 Markov chain 예시</title>
+  <desc id="desc">맑음, 비, 흐림 상태 사이의 전이 확률을 보여주는 Markov chain</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="760" height="460" fill="#f7f8fb"/>
+  <text x="380" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">날씨 Markov chain</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif">
+    <circle cx="380" cy="130" r="58" fill="#fff6e8" stroke="#d98b24" stroke-width="3"/><text x="380" y="137" text-anchor="middle" font-size="20" font-weight="700" fill="#172033">맑음</text>
+    <circle cx="215" cy="320" r="58" fill="#eef7ff" stroke="#3b82c4" stroke-width="3"/><text x="215" y="327" text-anchor="middle" font-size="20" font-weight="700" fill="#172033">비</text>
+    <circle cx="545" cy="320" r="58" fill="#f1fbf4" stroke="#45a36d" stroke-width="3"/><text x="545" y="327" text-anchor="middle" font-size="20" font-weight="700" fill="#172033">흐림</text>
+    <path d="M420 173 C465 214, 502 249, 524 270" fill="none" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="488" y="230" font-size="15" fill="#253047">0.2</text>
+    <path d="M338 173 C293 214, 257 249, 235 270" fill="none" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="278" y="230" font-size="15" fill="#253047">0.1</text>
+    <path d="M268 320 C340 280, 420 280, 492 320" fill="none" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="380" y="286" text-anchor="middle" font-size="15" fill="#253047">0.3 / 0.2</text>
+    <path d="M517 285 C445 236, 395 200, 386 190" fill="none" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="450" y="222" font-size="15" fill="#253047">0.4</text>
+    <path d="M238 285 C305 236, 357 200, 374 190" fill="none" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="302" y="222" font-size="15" fill="#253047">0.3</text>
+    <path d="M380 72 C430 42, 475 75, 438 116" fill="none" stroke="#d98b24" stroke-width="2" marker-end="url(#arrow)"/><text x="462" y="73" font-size="15" fill="#253047">0.7</text>
+    <path d="M174 276 C130 230, 169 190, 209 260" fill="none" stroke="#3b82c4" stroke-width="2" marker-end="url(#arrow)"/><text x="132" y="221" font-size="15" fill="#253047">0.4</text>
+    <path d="M585 276 C630 230, 590 190, 550 260" fill="none" stroke="#45a36d" stroke-width="2" marker-end="url(#arrow)"/><text x="626" y="221" font-size="15" fill="#253047">0.4</text>
+  </g>
+</svg>

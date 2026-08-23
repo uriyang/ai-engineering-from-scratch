@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="320" viewBox="0 0 1100 320" role="img" aria-labelledby="title desc">
+  <title id="title">확산 모델의 forward와 reverse process</title>
+  <desc id="desc">데이터에 노이즈를 더하는 forward process와 노이즈에서 데이터를 복원하는 learned reverse process</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="1100" height="320" fill="#f7f8fb"/>
+  <text x="550" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">확산 과정</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="16">
+    <text x="270" y="83" text-anchor="middle" font-size="18" font-weight="700" fill="#253047">Forward: 노이즈 추가</text>
+    <rect x="60" y="110" width="100" height="56" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/><text x="110" y="144" text-anchor="middle" font-weight="700" fill="#172033">x_0 데이터</text>
+    <rect x="225" y="110" width="80" height="56" rx="8" fill="#ffffff" stroke="#c8d0dc" stroke-width="2"/><text x="265" y="144" text-anchor="middle" font-weight="700" fill="#172033">x_1</text>
+    <rect x="370" y="110" width="80" height="56" rx="8" fill="#ffffff" stroke="#c8d0dc" stroke-width="2"/><text x="410" y="144" text-anchor="middle" font-weight="700" fill="#172033">x_2</text>
+    <rect x="520" y="110" width="105" height="56" rx="8" fill="#fff3ef" stroke="#d36b45" stroke-width="2"/><text x="572" y="144" text-anchor="middle" font-weight="700" fill="#172033">x_T 노이즈</text>
+    <line x1="160" y1="138" x2="210" y2="138" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="185" y="126" text-anchor="middle" fill="#526078">노이즈</text>
+    <line x1="305" y1="138" x2="355" y2="138" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="330" y="126" text-anchor="middle" fill="#526078">노이즈</text>
+    <line x1="450" y1="138" x2="505" y2="138" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="478" y="126" text-anchor="middle" fill="#526078">...</text>
+    <text x="815" y="83" text-anchor="middle" font-size="18" font-weight="700" fill="#253047">Reverse: 학습된 노이즈 제거</text>
+    <rect x="520" y="220" width="105" height="56" rx="8" fill="#fff3ef" stroke="#d36b45" stroke-width="2"/><text x="572" y="254" text-anchor="middle" font-weight="700" fill="#172033">x_T 노이즈</text>
+    <rect x="700" y="220" width="110" height="56" rx="8" fill="#ffffff" stroke="#c8d0dc" stroke-width="2"/><text x="755" y="254" text-anchor="middle" font-weight="700" fill="#172033">x_{T-1}</text>
+    <rect x="875" y="220" width="110" height="56" rx="8" fill="#ffffff" stroke="#c8d0dc" stroke-width="2"/><text x="930" y="254" text-anchor="middle" font-weight="700" fill="#172033">x_{T-2}</text>
+    <rect x="1015" y="220" width="70" height="56" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/><text x="1050" y="254" text-anchor="middle" font-weight="700" fill="#172033">x_0</text>
+    <line x1="625" y1="248" x2="685" y2="248" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="656" y="236" text-anchor="middle" fill="#526078">모델</text>
+    <line x1="810" y1="248" x2="860" y2="248" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="835" y="236" text-anchor="middle" fill="#526078">모델</text>
+    <line x1="985" y1="248" x2="1000" y2="248" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="994" y="236" text-anchor="middle" fill="#526078">...</text>
+  </g>
+</svg>
