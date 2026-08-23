@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-labelledby="title desc">
+  <title id="title">볼록 함수와 비볼록 함수 비교</title>
+  <desc id="desc">볼록 함수와 비볼록 함수의 최적화 차이를 비교한다.</desc>
+  <rect width="900" height="320" fill="#f7f8fb"/>
+  <text x="450" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">볼록 함수와 비볼록 함수</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif">
+    <rect x="70" y="82" width="330" height="178" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/>
+    <text x="235" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#172033">볼록 함수</text>
+    <path d="M120 218 C165 122, 300 122, 350 218" fill="none" stroke="#2563a8" stroke-width="5"/>
+    <circle cx="235" cy="183" r="7" fill="#2563a8"/>
+    <text x="235" y="284" text-anchor="middle" font-size="17" fill="#253047">하나의 그릇 모양 · 국소 최솟값 = 전역 최솟값</text>
+    <rect x="500" y="82" width="330" height="178" rx="8" fill="#fff3ef" stroke="#d36b45" stroke-width="2"/>
+    <text x="665" y="118" text-anchor="middle" font-size="24" font-weight="700" fill="#172033">비볼록 함수</text>
+    <path d="M540 210 C575 115, 610 230, 650 160 C690 90, 720 245, 790 145" fill="none" stroke="#c4552e" stroke-width="5"/>
+    <circle cx="610" cy="211" r="6" fill="#c4552e"/>
+    <circle cx="690" cy="143" r="6" fill="#c4552e"/>
+    <text x="665" y="284" text-anchor="middle" font-size="17" fill="#253047">여러 계곡 · 안장점/국소 최솟값 가능</text>
+  </g>
+</svg>

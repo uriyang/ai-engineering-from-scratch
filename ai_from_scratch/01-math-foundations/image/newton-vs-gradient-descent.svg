@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="330" viewBox="0 0 980 330" role="img" aria-labelledby="title desc">
+  <title id="title">Gradient descent와 Newton 방법 비교</title>
+  <desc id="desc">Gradient descent는 작은 gradient step을 반복하고 Newton 방법은 국소 이차 근사의 최소점으로 이동한다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="980" height="330" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">1차 방법과 2차 방법의 단계</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif">
+    <rect x="66" y="84" width="380" height="185" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/>
+    <text x="256" y="120" text-anchor="middle" font-size="23" font-weight="700" fill="#172033">Gradient descent</text>
+    <circle cx="135" cy="206" r="8" fill="#2563a8"/><circle cx="195" cy="185" r="8" fill="#2563a8"/><circle cx="245" cy="170" r="8" fill="#2563a8"/><circle cx="295" cy="162" r="8" fill="#2563a8"/>
+    <line x1="143" y1="203" x2="184" y2="189" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="203" y1="183" x2="234" y2="173" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="253" y1="169" x2="284" y2="164" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="256" y="246" text-anchor="middle" font-size="16" fill="#526078">gradient 방향으로 작은 단계 반복</text>
+    <rect x="534" y="84" width="380" height="185" rx="8" fill="#f1fbf4" stroke="#45a36d" stroke-width="2"/>
+    <text x="724" y="120" text-anchor="middle" font-size="23" font-weight="700" fill="#172033">Newton's method</text>
+    <circle cx="620" cy="208" r="8" fill="#2b8a55"/><circle cx="780" cy="156" r="8" fill="#2b8a55"/>
+    <line x1="629" y1="205" x2="766" y2="161" stroke="#3f4b63" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M595 220 C650 125, 765 125, 825 220" fill="none" stroke="#45a36d" stroke-width="4"/>
+    <text x="724" y="246" text-anchor="middle" font-size="16" fill="#526078">곡률을 써서 이차 근사의 최소점으로 이동</text>
+  </g>
+</svg>
