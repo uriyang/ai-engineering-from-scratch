@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="280" viewBox="0 0 980 280" role="img" aria-labelledby="title desc">
+  <title id="title">선형 시스템의 해 유형</title>
+  <desc id="desc">해가 하나인 경우, 해가 없는 경우, 해가 무한히 많은 경우를 비교한다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="980" height="280" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">선형 시스템의 해 유형</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif">
+    <rect x="52" y="88" width="260" height="78" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/>
+    <text x="182" y="120" text-anchor="middle" font-size="21" font-weight="700" fill="#172033">해가 하나</text>
+    <text x="182" y="147" text-anchor="middle" font-size="16" fill="#526078">초평면들이 한 점에서 만남</text>
+    <line x1="182" y1="168" x2="182" y2="205" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="52" y="207" width="260" height="42" rx="8" fill="#ffffff" stroke="#c8d0dc"/>
+    <text x="182" y="234" text-anchor="middle" font-size="16" fill="#253047">유일한 x</text>
+    <rect x="360" y="88" width="260" height="78" rx="8" fill="#fff3ef" stroke="#d36b45" stroke-width="2"/>
+    <text x="490" y="120" text-anchor="middle" font-size="21" font-weight="700" fill="#172033">해가 없음</text>
+    <text x="490" y="147" text-anchor="middle" font-size="16" fill="#526078">제약들이 서로 만나지 않음</text>
+    <line x1="490" y1="168" x2="490" y2="205" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="360" y="207" width="260" height="42" rx="8" fill="#ffffff" stroke="#c8d0dc"/>
+    <text x="490" y="234" text-anchor="middle" font-size="16" fill="#253047">근사하려면 least squares</text>
+    <rect x="668" y="88" width="260" height="78" rx="8" fill="#f1fbf4" stroke="#45a36d" stroke-width="2"/>
+    <text x="798" y="120" text-anchor="middle" font-size="21" font-weight="700" fill="#172033">해가 무한히 많음</text>
+    <text x="798" y="147" text-anchor="middle" font-size="16" fill="#526078">일부 방정식이 중복됨</text>
+    <line x1="798" y1="168" x2="798" y2="205" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="668" y="207" width="260" height="42" rx="8" fill="#ffffff" stroke="#c8d0dc"/>
+    <text x="798" y="234" text-anchor="middle" font-size="16" fill="#253047">해 공간이 남음</text>
+  </g>
+</svg>
