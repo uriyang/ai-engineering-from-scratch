@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900" role="img" aria-labelledby="title desc">
+  <title id="title">샘플링 방법 선택 가이드</title>
+  <desc id="desc">목적에 따라 Monte Carlo, Importance Sampling, MCMC, Top-k, Top-p, Diffusion, Reparameterization, Gumbel-Softmax를 선택하는 흐름도</desc>
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#44516c"/>
+    </marker>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .title { font: 700 34px Arial, sans-serif; fill: #1b2437; }
+      .subtitle { font: 400 17px Arial, sans-serif; fill: #526078; }
+      .hub { fill: #1f2a44; stroke: #111827; stroke-width: 2; }
+      .hub-text { font: 700 22px Arial, sans-serif; fill: #ffffff; }
+      .card { stroke-width: 2; rx: 8; }
+      .card-title { font: 700 21px Arial, sans-serif; fill: #172033; }
+      .item { font: 400 17px Arial, sans-serif; fill: #253047; }
+      .note { font: 400 14px Arial, sans-serif; fill: #62708a; }
+      .line { fill: none; stroke: #44516c; stroke-width: 2.4; marker-end: url(#arrow); }
+      .estimate { fill: #eef7ff; stroke: #3b82c4; }
+      .target { fill: #f1fbf4; stroke: #45a36d; }
+      .generate { fill: #fff6e8; stroke: #d98b24; }
+      .gradient { fill: #f7f0ff; stroke: #8b5cc7; }
+      .pill { fill: #ffffff; stroke: #c8d0dc; stroke-width: 1.4; rx: 7; }
+      .pill-text { font: 700 15px Arial, sans-serif; fill: #23314d; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1280" height="900"/>
+  <text class="title" x="640" y="58" text-anchor="middle">샘플링 방법 선택 가이드</text>
+  <text class="subtitle" x="640" y="88" text-anchor="middle">먼저 목적을 고르고, 목표 분포를 얼마나 직접 다룰 수 있는지 확인한다.</text>
+
+  <rect class="hub" x="465" y="132" width="350" height="86" rx="8"/>
+  <text class="hub-text" x="640" y="168" text-anchor="middle">무엇이 필요한가?</text>
+  <text class="subtitle" x="640" y="195" text-anchor="middle" fill="#d7deeb">estimate · sample · generate · differentiate</text>
+
+  <path class="line" d="M548 218 C430 258, 288 268, 228 310"/>
+  <path class="line" d="M610 218 C565 270, 510 276, 456 310"/>
+  <path class="line" d="M682 218 C725 270, 778 276, 824 310"/>
+  <path class="line" d="M744 218 C860 258, 1000 268, 1052 310"/>
+
+  <rect class="card estimate" x="62" y="310" width="280" height="450"/>
+  <text class="card-title" x="202" y="348" text-anchor="middle">기대값 / 적분 추정</text>
+  <text class="note" x="202" y="374" text-anchor="middle">직접 계산이 어려운 양을 근사</text>
+
+  <rect class="pill" x="92" y="406" width="220" height="58"/>
+  <text class="pill-text" x="202" y="430" text-anchor="middle">Monte Carlo</text>
+  <text class="note" x="202" y="451" text-anchor="middle">표본 평균으로 기본 추정</text>
+
+  <rect class="pill" x="92" y="488" width="220" height="58"/>
+  <text class="pill-text" x="202" y="512" text-anchor="middle">Importance Sampling</text>
+  <text class="note" x="202" y="533" text-anchor="middle">중요한 영역에 가중치 부여</text>
+
+  <rect class="pill" x="92" y="570" width="220" height="58"/>
+  <text class="pill-text" x="202" y="594" text-anchor="middle">Stratified Sampling</text>
+  <text class="note" x="202" y="615" text-anchor="middle">공간을 고르게 덮어 분산 감소</text>
+
+  <text class="item" x="92" y="670">필요할 때</text>
+  <text class="note" x="92" y="696">기대 손실, 분배 함수,</text>
+  <text class="note" x="92" y="718">베이지안 증거를 근사할 때</text>
+
+  <rect class="card target" x="364" y="310" width="280" height="450"/>
+  <text class="card-title" x="504" y="348" text-anchor="middle">목표 분포에서 샘플</text>
+  <text class="note" x="504" y="374" text-anchor="middle">분포를 알지만 직접 뽑기 어려울 때</text>
+
+  <rect class="pill" x="394" y="406" width="220" height="58"/>
+  <text class="pill-text" x="504" y="430" text-anchor="middle">Inverse CDF</text>
+  <text class="note" x="504" y="451" text-anchor="middle">CDF 역함수를 알 때</text>
+
+  <rect class="pill" x="394" y="488" width="220" height="58"/>
+  <text class="pill-text" x="504" y="512" text-anchor="middle">Rejection Sampling</text>
+  <text class="note" x="504" y="533" text-anchor="middle">density 평가가 가능할 때</text>
+
+  <rect class="pill" x="394" y="570" width="220" height="58"/>
+  <text class="pill-text" x="504" y="594" text-anchor="middle">Metropolis-Hastings</text>
+  <text class="note" x="504" y="615" text-anchor="middle">posterior를 탐색할 때</text>
+
+  <rect class="pill" x="394" y="652" width="220" height="58"/>
+  <text class="pill-text" x="504" y="676" text-anchor="middle">Gibbs Sampling</text>
+  <text class="note" x="504" y="697" text-anchor="middle">조건부분포가 쉬울 때</text>
+
+  <rect class="card generate" x="666" y="310" width="280" height="450"/>
+  <text class="card-title" x="806" y="348" text-anchor="middle">생성 모델 출력 조절</text>
+  <text class="note" x="806" y="374" text-anchor="middle">창의성, 일관성, 다양성 제어</text>
+
+  <rect class="pill" x="696" y="406" width="220" height="58"/>
+  <text class="pill-text" x="806" y="430" text-anchor="middle">Temperature</text>
+  <text class="note" x="806" y="451" text-anchor="middle">확률의 날카로움 조절</text>
+
+  <rect class="pill" x="696" y="488" width="220" height="58"/>
+  <text class="pill-text" x="806" y="512" text-anchor="middle">Top-k</text>
+  <text class="note" x="806" y="533" text-anchor="middle">상위 k개 후보만 유지</text>
+
+  <rect class="pill" x="696" y="570" width="220" height="58"/>
+  <text class="pill-text" x="806" y="594" text-anchor="middle">Top-p</text>
+  <text class="note" x="806" y="615" text-anchor="middle">누적 확률 p까지 유지</text>
+
+  <rect class="pill" x="696" y="652" width="220" height="58"/>
+  <text class="pill-text" x="806" y="676" text-anchor="middle">Diffusion Sampling</text>
+  <text class="note" x="806" y="697" text-anchor="middle">노이즈에서 단계적 denoise</text>
+
+  <rect class="card gradient" x="968" y="310" width="250" height="450"/>
+  <text class="card-title" x="1093" y="348" text-anchor="middle">미분 가능한 샘플링</text>
+  <text class="note" x="1093" y="374" text-anchor="middle">샘플링을 학습 그래프에 넣기</text>
+
+  <rect class="pill" x="992" y="406" width="202" height="66"/>
+  <text class="pill-text" x="1093" y="431" text-anchor="middle">Reparameterization</text>
+  <text class="note" x="1093" y="453" text-anchor="middle">연속 latent에 사용</text>
+
+  <rect class="pill" x="992" y="502" width="202" height="66"/>
+  <text class="pill-text" x="1093" y="527" text-anchor="middle">Gumbel-Softmax</text>
+  <text class="note" x="1093" y="549" text-anchor="middle">범주형 latent 근사</text>
+
+  <text class="item" x="992" y="620">필요할 때</text>
+  <text class="note" x="992" y="646">VAE, discrete latent variable,</text>
+  <text class="note" x="992" y="668">neural architecture search</text>
+
+  <rect x="182" y="810" width="916" height="46" rx="8" fill="#ffffff" stroke="#c8d0dc"/>
+  <text class="note" x="640" y="839" text-anchor="middle">요약: 계산하기 어려우면 추정, 직접 뽑기 어려우면 MCMC 계열, 생성 품질을 조절하려면 temperature/top-k/top-p, gradient가 필요하면 reparameterization 계열을 쓴다.</text>
+</svg>
