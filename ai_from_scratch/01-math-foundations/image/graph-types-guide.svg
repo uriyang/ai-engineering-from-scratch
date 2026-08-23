@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">그래프 형태 빠른 구분</title>
+  <desc id="desc">무방향, 방향, 가중치, 이분, 트리, 순환 그래프를 작은 예시로 비교하는 그림</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .label { font: 700 20px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .note { font: 15px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .node { fill: #eef7ff; stroke: #3b82c4; stroke-width: 2; }
+      .node2 { fill: #fff6e8; stroke: #d98b24; stroke-width: 2; }
+      .edge { stroke: #3f4b63; stroke-width: 2.5; fill: none; }
+      .weight { font: 700 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #8b5cc7; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 10; }
+    </style>
+  </defs>
+  <rect width="980" height="520" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="label" font-size="28">그래프 형태 빠른 구분</text>
+
+  <g transform="translate(40 80)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">무방향 그래프</text>
+    <text x="24" y="58" class="note">관계에 방향이 없다</text>
+    <line x1="82" y1="104" x2="142" y2="78" class="edge"/>
+    <line x1="142" y1="78" x2="202" y2="122" class="edge"/>
+    <line x1="82" y1="104" x2="202" y2="122" class="edge"/>
+    <circle cx="82" cy="104" r="17" class="node"/>
+    <circle cx="142" cy="78" r="17" class="node"/>
+    <circle cx="202" cy="122" r="17" class="node"/>
+  </g>
+
+  <g transform="translate(350 80)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">방향 그래프</text>
+    <text x="24" y="58" class="note">간선에 흐름이 있다</text>
+    <line x1="82" y1="112" x2="140" y2="82" class="edge" marker-end="url(#arrow)"/>
+    <line x1="150" y1="84" x2="202" y2="116" class="edge" marker-end="url(#arrow)"/>
+    <line x1="202" y1="126" x2="88" y2="124" class="edge" marker-end="url(#arrow)"/>
+    <circle cx="82" cy="112" r="17" class="node"/>
+    <circle cx="142" cy="78" r="17" class="node"/>
+    <circle cx="202" cy="122" r="17" class="node"/>
+  </g>
+
+  <g transform="translate(660 80)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">가중치 그래프</text>
+    <text x="24" y="58" class="note">간선마다 비용이 있다</text>
+    <line x1="82" y1="104" x2="142" y2="78" class="edge"/>
+    <line x1="142" y1="78" x2="202" y2="122" class="edge"/>
+    <line x1="82" y1="104" x2="202" y2="122" class="edge"/>
+    <text x="105" y="85" class="weight">0.7</text>
+    <text x="178" y="94" class="weight">2.1</text>
+    <text x="138" y="134" class="weight">5</text>
+    <circle cx="82" cy="104" r="17" class="node"/>
+    <circle cx="142" cy="78" r="17" class="node"/>
+    <circle cx="202" cy="122" r="17" class="node"/>
+  </g>
+
+  <g transform="translate(40 290)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">이분 그래프</text>
+    <text x="24" y="58" class="note">두 그룹 사이만 연결된다</text>
+    <line x1="82" y1="88" x2="202" y2="82" class="edge"/>
+    <line x1="82" y1="88" x2="202" y2="136" class="edge"/>
+    <line x1="82" y1="138" x2="202" y2="82" class="edge"/>
+    <circle cx="82" cy="88" r="17" class="node"/>
+    <circle cx="82" cy="138" r="17" class="node"/>
+    <circle cx="202" cy="82" r="17" class="node2"/>
+    <circle cx="202" cy="136" r="17" class="node2"/>
+  </g>
+
+  <g transform="translate(350 290)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">트리</text>
+    <text x="24" y="58" class="note">사이클 없이 뻗는다</text>
+    <line x1="142" y1="78" x2="92" y2="124" class="edge"/>
+    <line x1="142" y1="78" x2="192" y2="124" class="edge"/>
+    <line x1="92" y1="124" x2="62" y2="150" class="edge"/>
+    <line x1="92" y1="124" x2="122" y2="150" class="edge"/>
+    <circle cx="142" cy="78" r="17" class="node"/>
+    <circle cx="92" cy="124" r="17" class="node"/>
+    <circle cx="192" cy="124" r="17" class="node"/>
+    <circle cx="62" cy="150" r="14" class="node"/>
+    <circle cx="122" cy="150" r="14" class="node"/>
+  </g>
+
+  <g transform="translate(660 290)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">순환 그래프</text>
+    <text x="24" y="58" class="note">다시 출발점으로 돌아온다</text>
+    <line x1="92" y1="120" x2="142" y2="82" class="edge"/>
+    <line x1="142" y1="82" x2="202" y2="120" class="edge"/>
+    <line x1="202" y1="120" x2="150" y2="152" class="edge"/>
+    <line x1="150" y1="152" x2="92" y2="120" class="edge"/>
+    <circle cx="92" cy="120" r="17" class="node"/>
+    <circle cx="142" cy="82" r="17" class="node"/>
+    <circle cx="202" cy="120" r="17" class="node"/>
+    <circle cx="150" cy="152" r="17" class="node"/>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="300" viewBox="0 0 820 300" role="img" aria-labelledby="title desc">
+  <title id="title">GNN 메시지 패싱 흐름</title>
+  <desc id="desc">중심 node가 이웃 node들의 feature를 모은 뒤 자신의 state를 갱신하는 흐름도</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="820" height="300" fill="#f7f8fb"/>
+  <text x="410" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">메시지 패싱</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="16">
+    <circle cx="120" cy="150" r="44" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/><text x="120" y="156" text-anchor="middle" font-weight="700" fill="#172033">node v</text>
+    <circle cx="245" cy="95" r="38" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/><text x="245" y="101" text-anchor="middle" font-weight="700" fill="#172033">u1</text>
+    <circle cx="245" cy="205" r="38" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/><text x="245" y="211" text-anchor="middle" font-weight="700" fill="#172033">u2</text>
+    <rect x="400" y="112" width="150" height="76" rx="8" fill="#f1fbf4" stroke="#45a36d" stroke-width="2"/><text x="475" y="145" text-anchor="middle" font-weight="700" fill="#172033">이웃 정보</text><text x="475" y="169" text-anchor="middle" fill="#526078">모으기</text>
+    <rect x="650" y="122" width="120" height="56" rx="8" fill="#ffffff" stroke="#8b5cc7" stroke-width="2"/><text x="710" y="156" text-anchor="middle" font-weight="700" fill="#172033">h_v 갱신</text>
+    <line x1="283" y1="105" x2="386" y2="132" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="283" y1="195" x2="386" y2="168" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="164" y1="150" x2="386" y2="150" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="550" y1="150" x2="635" y2="150" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+  </g>
+</svg>

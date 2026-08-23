@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">그래프 알고리즘 빠른 비교</title>
+  <desc id="desc">BFS, DFS, 라플라시안, 메시지 패싱, PageRank, random walk를 작은 예시로 비교하는 그림</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .label { font: 700 20px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .note { font: 15px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .small { font: 700 13px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 10; }
+      .edge { stroke: #3f4b63; stroke-width: 2.4; fill: none; }
+      .soft { stroke: #9aa7bd; stroke-width: 2; fill: none; }
+      .node { fill: #eef7ff; stroke: #3b82c4; stroke-width: 2; }
+      .node2 { fill: #fff6e8; stroke: #d98b24; stroke-width: 2; }
+      .node3 { fill: #f1fbf4; stroke: #45a36d; stroke-width: 2; }
+      .node4 { fill: #f5efff; stroke: #8b5cc7; stroke-width: 2; }
+    </style>
+  </defs>
+  <rect width="980" height="520" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="label" font-size="28">그래프 알고리즘 빠른 비교</text>
+
+  <g transform="translate(40 80)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">BFS</text>
+    <text x="24" y="58" class="note">가까운 이웃부터 층별 탐색</text>
+    <line x1="82" y1="118" x2="142" y2="82" class="edge"/>
+    <line x1="142" y1="82" x2="202" y2="118" class="edge"/>
+    <line x1="82" y1="118" x2="82" y2="150" class="edge"/>
+    <line x1="202" y1="118" x2="202" y2="150" class="edge"/>
+    <circle cx="82" cy="118" r="18" class="node"/>
+    <circle cx="142" cy="82" r="18" class="node4"/>
+    <circle cx="202" cy="118" r="18" class="node"/>
+    <circle cx="82" cy="150" r="14" class="node2"/>
+    <circle cx="202" cy="150" r="14" class="node2"/>
+    <text x="142" y="87" text-anchor="middle" class="small">0</text>
+    <text x="82" y="123" text-anchor="middle" class="small">1</text>
+    <text x="202" y="123" text-anchor="middle" class="small">1</text>
+    <text x="82" y="155" text-anchor="middle" class="small">2</text>
+    <text x="202" y="155" text-anchor="middle" class="small">2</text>
+  </g>
+
+  <g transform="translate(350 80)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">DFS</text>
+    <text x="24" y="58" class="note">한 경로를 깊게 따라감</text>
+    <line x1="72" y1="126" x2="122" y2="82" class="edge" marker-end="url(#arrow)"/>
+    <line x1="122" y1="82" x2="178" y2="104" class="edge" marker-end="url(#arrow)"/>
+    <line x1="178" y1="104" x2="218" y2="150" class="edge" marker-end="url(#arrow)"/>
+    <line x1="122" y1="82" x2="92" y2="154" class="soft"/>
+    <circle cx="72" cy="126" r="17" class="node4"/>
+    <circle cx="122" cy="82" r="17" class="node"/>
+    <circle cx="178" cy="104" r="17" class="node"/>
+    <circle cx="218" cy="150" r="17" class="node"/>
+    <circle cx="92" cy="154" r="14" class="node2"/>
+  </g>
+
+  <g transform="translate(660 80)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">라플라시안</text>
+    <text x="24" y="58" class="note">연결 구조를 행렬로 분석</text>
+    <rect x="48" y="86" width="70" height="62" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/>
+    <text x="83" y="122" text-anchor="middle" class="small">A</text>
+    <text x="132" y="123" text-anchor="middle" class="label">+</text>
+    <rect x="150" y="86" width="70" height="62" rx="8" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/>
+    <text x="185" y="122" text-anchor="middle" class="small">D</text>
+    <line x1="222" y1="117" x2="244" y2="117" class="edge" marker-end="url(#arrow)"/>
+    <text x="248" y="122" class="small">L</text>
+  </g>
+
+  <g transform="translate(40 290)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">메시지 패싱</text>
+    <text x="24" y="58" class="note">이웃 특징을 모아 갱신</text>
+    <circle cx="90" cy="88" r="16" class="node2"/>
+    <circle cx="90" cy="146" r="16" class="node2"/>
+    <circle cx="190" cy="118" r="22" class="node4"/>
+    <line x1="106" y1="92" x2="166" y2="110" class="edge" marker-end="url(#arrow)"/>
+    <line x1="106" y1="142" x2="166" y2="126" class="edge" marker-end="url(#arrow)"/>
+    <text x="190" y="123" text-anchor="middle" class="small">h_v</text>
+  </g>
+
+  <g transform="translate(350 290)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">PageRank</text>
+    <text x="24" y="58" class="note">많이 가리키는 노드를 높게 평가</text>
+    <circle cx="86" cy="122" r="15" class="node"/>
+    <circle cx="142" cy="82" r="24" class="node4"/>
+    <circle cx="206" cy="122" r="15" class="node"/>
+    <circle cx="142" cy="150" r="15" class="node2"/>
+    <line x1="99" y1="114" x2="122" y2="97" class="edge" marker-end="url(#arrow)"/>
+    <line x1="192" y1="114" x2="164" y2="96" class="edge" marker-end="url(#arrow)"/>
+    <line x1="142" y1="134" x2="142" y2="110" class="edge" marker-end="url(#arrow)"/>
+    <text x="142" y="87" text-anchor="middle" class="small">높음</text>
+  </g>
+
+  <g transform="translate(660 290)">
+    <rect class="panel" width="280" height="180"/>
+    <text x="24" y="34" class="label">Random walk</text>
+    <text x="24" y="58" class="note">확률적으로 이동하며 섞임</text>
+    <circle cx="82" cy="124" r="17" class="node4"/>
+    <circle cx="142" cy="82" r="17" class="node"/>
+    <circle cx="206" cy="116" r="17" class="node"/>
+    <circle cx="154" cy="150" r="17" class="node2"/>
+    <line x1="96" y1="114" x2="126" y2="92" class="edge" marker-end="url(#arrow)"/>
+    <line x1="156" y1="88" x2="190" y2="106" class="edge" marker-end="url(#arrow)"/>
+    <line x1="194" y1="126" x2="169" y2="142" class="edge" marker-end="url(#arrow)"/>
+    <line x1="138" y1="146" x2="98" y2="130" class="edge" marker-end="url(#arrow)"/>
+  </g>
+</svg>

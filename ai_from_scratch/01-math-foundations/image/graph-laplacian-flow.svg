@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="380" viewBox="0 0 980 380" role="img" aria-labelledby="title desc">
+  <title id="title">그래프 라플라시안 분석 흐름</title>
+  <desc id="desc">Graph에서 인접행렬, 차수행렬, Laplacian을 만들고 고유값과 고유벡터로 구조를 분석하는 흐름도</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="980" height="380" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">그래프 라플라시안 분석 흐름</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="16">
+    <rect x="70" y="155" width="120" height="58" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/><text x="130" y="190" text-anchor="middle" font-weight="700" fill="#172033">Graph G</text>
+    <rect x="290" y="95" width="150" height="54" rx="8" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/><text x="365" y="128" text-anchor="middle" font-weight="700" fill="#172033">인접행렬 A</text>
+    <rect x="290" y="220" width="150" height="54" rx="8" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/><text x="365" y="253" text-anchor="middle" font-weight="700" fill="#172033">차수행렬 D</text>
+    <rect x="530" y="155" width="130" height="58" rx="8" fill="#f1fbf4" stroke="#45a36d" stroke-width="2"/><text x="595" y="190" text-anchor="middle" font-weight="700" fill="#172033">L = D - A</text>
+    <rect x="760" y="95" width="150" height="54" rx="8" fill="#ffffff" stroke="#8b5cc7" stroke-width="2"/><text x="835" y="128" text-anchor="middle" font-weight="700" fill="#172033">고유값</text>
+    <rect x="760" y="220" width="150" height="54" rx="8" fill="#ffffff" stroke="#8b5cc7" stroke-width="2"/><text x="835" y="253" text-anchor="middle" font-weight="700" fill="#172033">고유벡터</text>
+    <line x1="190" y1="171" x2="275" y2="132" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="190" y1="197" x2="275" y2="237" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="440" y1="122" x2="516" y2="168" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="440" y1="247" x2="516" y2="202" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="660" y1="168" x2="745" y2="132" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="660" y1="202" x2="745" y2="237" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="835" y="163" text-anchor="middle" fill="#526078">연결 component, Fiedler value</text>
+    <text x="835" y="288" text-anchor="middle" fill="#526078">스펙트럴 클러스터링</text>
+  </g>
+</svg>
