@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">FFT의 짝수 홀수 분할</title>
+  <desc id="desc">8개 샘플을 짝수 index와 홀수 index로 나누고 4-point FFT를 결합해 8-point FFT를 만드는 흐름도</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="980" height="360" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">Cooley-Tukey FFT: 분할하고 결합하기</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="16">
+    <rect x="70" y="145" width="150" height="60" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/><text x="145" y="181" text-anchor="middle" font-weight="700" fill="#172033">x[0..7]</text>
+    <rect x="315" y="92" width="170" height="55" rx="8" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/><text x="400" y="126" text-anchor="middle" font-weight="700" fill="#172033">짝수 index 샘플</text>
+    <rect x="315" y="205" width="170" height="55" rx="8" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/><text x="400" y="239" text-anchor="middle" font-weight="700" fill="#172033">홀수 index 샘플</text>
+    <rect x="580" y="92" width="150" height="55" rx="8" fill="#f1fbf4" stroke="#45a36d" stroke-width="2"/><text x="655" y="126" text-anchor="middle" font-weight="700" fill="#172033">4-point FFT</text>
+    <rect x="580" y="205" width="150" height="55" rx="8" fill="#f1fbf4" stroke="#45a36d" stroke-width="2"/><text x="655" y="239" text-anchor="middle" font-weight="700" fill="#172033">4-point FFT</text>
+    <rect x="800" y="145" width="120" height="60" rx="8" fill="#ffffff" stroke="#8b5cc7" stroke-width="2"/><text x="860" y="171" text-anchor="middle" font-weight="700" fill="#172033">결합</text><text x="860" y="193" text-anchor="middle" fill="#526078">twiddle factor</text>
+    <line x1="220" y1="162" x2="300" y2="126" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="220" y1="188" x2="300" y2="226" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="485" y1="120" x2="565" y2="120" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="485" y1="233" x2="565" y2="233" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="730" y1="120" x2="787" y2="156" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="730" y1="233" x2="787" y2="193" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="490" y="312" text-anchor="middle" fill="#526078">각 재귀 단계는 O(N), 단계 수는 log2(N)이므로 전체 O(N log N)</text>
+  </g>
+</svg>

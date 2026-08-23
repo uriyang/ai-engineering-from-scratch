@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="310" viewBox="0 0 980 310" role="img" aria-labelledby="title desc">
+  <title id="title">합성곱 정리 흐름</title>
+  <desc id="desc">시간 영역 convolution을 FFT, 원소별 곱셈, IFFT로 계산하는 흐름도</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="980" height="310" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">합성곱 정리</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="16">
+    <rect x="62" y="95" width="120" height="55" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/><text x="122" y="129" text-anchor="middle" font-weight="700" fill="#172033">x[n]</text>
+    <rect x="62" y="190" width="120" height="55" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/><text x="122" y="224" text-anchor="middle" font-weight="700" fill="#172033">h[n]</text>
+    <rect x="282" y="95" width="120" height="55" rx="8" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/><text x="342" y="129" text-anchor="middle" font-weight="700" fill="#172033">X[k]</text>
+    <rect x="282" y="190" width="120" height="55" rx="8" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/><text x="342" y="224" text-anchor="middle" font-weight="700" fill="#172033">H[k]</text>
+    <rect x="520" y="142" width="170" height="58" rx="8" fill="#f1fbf4" stroke="#45a36d" stroke-width="2"/><text x="605" y="176" text-anchor="middle" font-weight="700" fill="#172033">X[k] · H[k]</text>
+    <rect x="790" y="142" width="130" height="58" rx="8" fill="#ffffff" stroke="#8b5cc7" stroke-width="2"/><text x="855" y="176" text-anchor="middle" font-weight="700" fill="#172033">y[n] = x*h</text>
+    <line x1="182" y1="123" x2="267" y2="123" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="224" y="111" text-anchor="middle" fill="#526078">FFT</text>
+    <line x1="182" y1="218" x2="267" y2="218" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="224" y="206" text-anchor="middle" fill="#526078">FFT</text>
+    <line x1="402" y1="123" x2="505" y2="158" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><line x1="402" y1="218" x2="505" y2="184" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <line x1="690" y1="171" x2="775" y2="171" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/><text x="732" y="159" text-anchor="middle" fill="#526078">IFFT</text>
+    <text x="490" y="276" text-anchor="middle" fill="#526078">시간 영역 합성곱 = 주파수 영역 원소별 곱셈</text>
+  </g>
+</svg>
