@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="420" viewBox="0 0 620 420" role="img" aria-labelledby="title desc">
+  <title id="title">복소수 단위원 회전</title>
+  <desc id="desc">단위원 위의 1, i, -1, -i와 e의 복소 지수 회전을 보여준다.</desc>
+  <rect width="620" height="420" fill="#f7f8fb"/>
+  <text x="310" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="28" font-weight="700" fill="#172033">단위원: e^(i theta)</text>
+  <g transform="translate(310 220)" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif">
+    <line x1="-190" y1="0" x2="190" y2="0" stroke="#8b96aa" stroke-width="2"/>
+    <line x1="0" y1="140" x2="0" y2="-140" stroke="#8b96aa" stroke-width="2"/>
+    <circle cx="0" cy="0" r="120" fill="#ffffff" stroke="#3b82c4" stroke-width="3"/>
+    <circle cx="120" cy="0" r="7" fill="#2563a8"/><text x="142" y="6" font-size="18" font-weight="700" fill="#172033">1</text><text x="104" y="30" font-size="14" fill="#526078">e^(i0)</text>
+    <circle cx="0" cy="-120" r="7" fill="#2563a8"/><text x="12" y="-128" font-size="18" font-weight="700" fill="#172033">i</text><text x="10" y="-104" font-size="14" fill="#526078">e^(i*pi/2)</text>
+    <circle cx="-120" cy="0" r="7" fill="#2563a8"/><text x="-153" y="6" font-size="18" font-weight="700" fill="#172033">-1</text><text x="-172" y="30" font-size="14" fill="#526078">e^(i*pi)</text>
+    <circle cx="0" cy="120" r="7" fill="#2563a8"/><text x="12" y="126" font-size="18" font-weight="700" fill="#172033">-i</text><text x="10" y="150" font-size="14" fill="#526078">e^(i*3pi/2)</text>
+    <path d="M96,-72 A120,120 0 0,1 72,96" fill="none" stroke="#d36b45" stroke-width="4"/>
+  </g>
+</svg>

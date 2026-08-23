@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="300" viewBox="0 0 920 300" role="img" aria-labelledby="title desc">
+  <title id="title">복소수 곱셈과 회전행렬의 동치</title>
+  <desc id="desc">복소수 곱셈과 2차원 회전행렬이 같은 회전 결과를 만든다는 것을 보여준다.</desc>
+  <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/></marker></defs>
+  <rect width="920" height="300" fill="#f7f8fb"/>
+  <text x="460" y="42" text-anchor="middle" font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif" font-size="27" font-weight="700" fill="#172033">복소수 곱셈 = 회전행렬</text>
+  <g font-family="Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif">
+    <rect x="70" y="100" width="210" height="70" rx="8" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/>
+    <text x="175" y="130" text-anchor="middle" font-size="20" font-weight="700" fill="#172033">z = x + yi</text>
+    <text x="175" y="154" text-anchor="middle" font-size="15" fill="#526078">복소평면의 점</text>
+    <line x1="280" y1="135" x2="414" y2="135" stroke="#3f4b63" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="347" y="122" text-anchor="middle" font-size="15" fill="#526078">e^(i theta)를 곱함</text>
+    <rect x="430" y="100" width="210" height="70" rx="8" fill="#f1fbf4" stroke="#45a36d" stroke-width="2"/>
+    <text x="535" y="130" text-anchor="middle" font-size="20" font-weight="700" fill="#172033">회전된 점</text>
+    <text x="535" y="154" text-anchor="middle" font-size="15" fill="#526078">크기는 같고 각도만 변함</text>
+    <rect x="70" y="210" width="210" height="55" rx="8" fill="#fff6e8" stroke="#d98b24" stroke-width="2"/>
+    <text x="175" y="244" text-anchor="middle" font-size="18" font-weight="700" fill="#172033">벡터 [x, y]</text>
+    <line x1="280" y1="238" x2="414" y2="160" stroke="#3f4b63" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#arrow)"/>
+    <text x="382" y="217" text-anchor="middle" font-size="15" fill="#526078">회전행렬</text>
+    <rect x="690" y="102" width="170" height="130" rx="8" fill="#ffffff" stroke="#c8d0dc"/>
+    <text x="775" y="132" text-anchor="middle" font-size="18" font-weight="700" fill="#172033">같은 식</text>
+    <text x="775" y="162" text-anchor="middle" font-size="15" fill="#253047">x cos - y sin</text>
+    <text x="775" y="188" text-anchor="middle" font-size="15" fill="#253047">x sin + y cos</text>
+  </g>
+</svg>
