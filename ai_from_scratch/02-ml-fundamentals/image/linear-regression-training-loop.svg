@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">선형 회귀 학습 루프</title>
+  <desc id="desc">선형 회귀에서 예측, 손실, 기울기, 파라미터 갱신이 반복되는 흐름</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 17px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .note { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .formula { font: 700 15px Menlo, Consolas, monospace; fill: #172033; }
+      .box { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .blue { fill: #eef7ff; stroke: #3b82c4; }
+      .orange { fill: #fff6e8; stroke: #d98b24; }
+      .green { fill: #f1fbf4; stroke: #45a36d; }
+      .purple { fill: #f5efff; stroke: #8b5cc7; }
+      .edge { stroke: #3f4b63; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="980" height="360" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">선형 회귀 학습 루프</text>
+
+  <g transform="translate(64 94)">
+    <rect x="0" y="32" width="150" height="74" class="box blue"/>
+    <text x="75" y="62" text-anchor="middle" class="label">모델</text>
+    <text x="75" y="88" text-anchor="middle" class="formula">y_hat = wx + b</text>
+
+    <rect x="230" y="32" width="150" height="74" class="box orange"/>
+    <text x="305" y="62" text-anchor="middle" class="label">손실</text>
+    <text x="305" y="88" text-anchor="middle" class="formula">MSE</text>
+
+    <rect x="460" y="32" width="150" height="74" class="box green"/>
+    <text x="535" y="62" text-anchor="middle" class="label">기울기</text>
+    <text x="535" y="88" text-anchor="middle" class="formula">dw, db</text>
+
+    <rect x="690" y="32" width="150" height="74" class="box purple"/>
+    <text x="765" y="62" text-anchor="middle" class="label">갱신</text>
+    <text x="765" y="88" text-anchor="middle" class="formula">w -= lr*dw</text>
+
+    <path d="M150 69 H218" class="edge"/>
+    <path d="M380 69 H448" class="edge"/>
+    <path d="M610 69 H678" class="edge"/>
+    <path d="M765 112 C765 178 75 178 75 118" class="edge"/>
+    <text x="420" y="210" text-anchor="middle" class="note">손실이 충분히 작아질 때까지 같은 루프를 반복한다</text>
+  </g>
+
+  <g transform="translate(160 270)">
+    <line x1="0" y1="34" x2="650" y2="34" stroke="#9aa7bd" stroke-width="2"/>
+    <line x1="36" y1="0" x2="36" y2="70" stroke="#9aa7bd" stroke-width="2"/>
+    <circle cx="110" cy="50" r="5" fill="#3b82c4"/>
+    <circle cx="190" cy="38" r="5" fill="#3b82c4"/>
+    <circle cx="270" cy="30" r="5" fill="#3b82c4"/>
+    <circle cx="350" cy="20" r="5" fill="#3b82c4"/>
+    <circle cx="430" cy="14" r="5" fill="#3b82c4"/>
+    <line x1="80" y1="56" x2="470" y2="10" stroke="#d98b24" stroke-width="4"/>
+    <text x="540" y="18" class="note">가장 잘 맞는 직선</text>
+  </g>
+</svg>

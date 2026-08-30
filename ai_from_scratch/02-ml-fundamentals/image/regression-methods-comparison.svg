@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
+  <title id="title">회귀 방법 빠른 비교</title>
+  <desc id="desc">단순 선형 회귀, 다중 선형 회귀, 다항 회귀, 릿지 회귀의 차이를 작은 그림으로 비교한다</desc>
+  <defs>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 18px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .note { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .formula { font: 700 14px Menlo, Consolas, monospace; fill: #172033; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .axis { stroke: #9aa7bd; stroke-width: 2; }
+      .point { fill: #3b82c4; }
+      .line { stroke: #d98b24; stroke-width: 4; fill: none; }
+      .curve { stroke: #8b5cc7; stroke-width: 4; fill: none; }
+      .soft { stroke: #45a36d; stroke-width: 4; fill: none; }
+    </style>
+  </defs>
+  <rect width="980" height="420" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">회귀 방법 빠른 비교</text>
+
+  <g transform="translate(44 82)">
+    <rect class="panel" width="205" height="285"/>
+    <text x="102" y="34" text-anchor="middle" class="label">단순 선형 회귀</text>
+    <text x="102" y="58" text-anchor="middle" class="note">입력 하나로 직선 예측</text>
+    <line x1="38" y1="206" x2="170" y2="206" class="axis"/>
+    <line x1="38" y1="78" x2="38" y2="206" class="axis"/>
+    <circle cx="62" cy="178" r="5" class="point"/>
+    <circle cx="86" cy="154" r="5" class="point"/>
+    <circle cx="118" cy="126" r="5" class="point"/>
+    <circle cx="148" cy="98" r="5" class="point"/>
+    <line x1="54" y1="184" x2="158" y2="90" class="line"/>
+    <text x="102" y="248" text-anchor="middle" class="formula">y = wx + b</text>
+  </g>
+
+  <g transform="translate(274 82)">
+    <rect class="panel" width="205" height="285"/>
+    <text x="102" y="34" text-anchor="middle" class="label">다중 선형 회귀</text>
+    <text x="102" y="58" text-anchor="middle" class="note">여러 입력을 함께 사용</text>
+    <polygon points="48,184 154,130 170,180 66,222" fill="#eef7ff" stroke="#3b82c4" stroke-width="2"/>
+    <line x1="58" y1="220" x2="170" y2="220" class="axis"/>
+    <line x1="58" y1="220" x2="58" y2="98" class="axis"/>
+    <line x1="58" y1="220" x2="100" y2="250" class="axis"/>
+    <circle cx="86" cy="185" r="5" class="point"/>
+    <circle cx="126" cy="162" r="5" class="point"/>
+    <circle cx="146" cy="188" r="5" class="point"/>
+    <text x="102" y="248" text-anchor="middle" class="formula">y = w1*x1 + ... + b</text>
+  </g>
+
+  <g transform="translate(504 82)">
+    <rect class="panel" width="205" height="285"/>
+    <text x="102" y="34" text-anchor="middle" class="label">다항 회귀</text>
+    <text x="102" y="58" text-anchor="middle" class="note">곡선 관계를 특징으로 표현</text>
+    <line x1="38" y1="206" x2="170" y2="206" class="axis"/>
+    <line x1="38" y1="78" x2="38" y2="206" class="axis"/>
+    <circle cx="56" cy="180" r="5" class="point"/>
+    <circle cx="84" cy="138" r="5" class="point"/>
+    <circle cx="118" cy="122" r="5" class="point"/>
+    <circle cx="150" cy="166" r="5" class="point"/>
+    <path d="M52 184 C78 112 126 110 156 170" class="curve"/>
+    <text x="102" y="248" text-anchor="middle" class="formula">y = w1*x + w2*x^2 + b</text>
+  </g>
+
+  <g transform="translate(734 82)">
+    <rect class="panel" width="205" height="285"/>
+    <text x="102" y="34" text-anchor="middle" class="label">릿지 회귀</text>
+    <text x="102" y="58" text-anchor="middle" class="note">큰 가중치에 벌점 부여</text>
+    <line x1="38" y1="206" x2="170" y2="206" class="axis"/>
+    <line x1="38" y1="78" x2="38" y2="206" class="axis"/>
+    <circle cx="58" cy="178" r="5" class="point"/>
+    <circle cx="82" cy="146" r="5" class="point"/>
+    <circle cx="118" cy="126" r="5" class="point"/>
+    <circle cx="150" cy="86" r="5" fill="#d98b24"/>
+    <path d="M54 184 C90 158 128 130 160 104" class="soft"/>
+    <text x="102" y="248" text-anchor="middle" class="formula">MSE + lambda*sum(w_i^2)</text>
+  </g>
+</svg>
