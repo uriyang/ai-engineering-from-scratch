@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">경험에서 패턴을 배우는 과정</title>
+  <desc id="desc">사람의 직관과 머신러닝이 여러 경험 또는 데이터에서 패턴을 익혀 새로운 사례에 적용하는 과정을 비교한 그림</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 18px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .note { font: 15px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .small { font: 700 13px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .blue { fill: #eef7ff; stroke: #3b82c4; }
+      .orange { fill: #fff6e8; stroke: #d98b24; }
+      .green { fill: #f1fbf4; stroke: #45a36d; }
+      .purple { fill: #f5efff; stroke: #8b5cc7; }
+      .edge { stroke: #3f4b63; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .soft { stroke: #9aa7bd; stroke-width: 1.8; fill: none; }
+    </style>
+  </defs>
+  <rect width="980" height="360" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">경험에서 패턴을 배우는 과정</text>
+
+  <g transform="translate(55 86)">
+    <rect x="0" y="0" width="870" height="96" class="panel"/>
+    <text x="28" y="34" class="label">사람</text>
+    <text x="28" y="62" class="note">여러 강아지를 반복해서 봄</text>
+
+    <circle cx="250" cy="48" r="18" class="blue"/>
+    <circle cx="310" cy="48" r="18" class="blue"/>
+    <circle cx="370" cy="48" r="18" class="blue"/>
+    <path d="M240 42 C248 22 270 22 278 42" class="soft"/>
+    <path d="M300 42 C308 22 330 22 338 42" class="soft"/>
+    <path d="M360 42 C368 22 390 22 398 42" class="soft"/>
+    <text x="310" y="82" text-anchor="middle" class="note">경험</text>
+
+    <path d="M410 48 H492" class="edge"/>
+    <rect x="510" y="20" width="145" height="56" class="orange"/>
+    <text x="582" y="53" text-anchor="middle" class="small">특징과 패턴</text>
+
+    <path d="M655 48 H735" class="edge"/>
+    <circle cx="785" cy="48" r="20" class="green"/>
+    <path d="M773 42 C784 18 806 18 817 42" class="soft"/>
+    <text x="785" y="82" text-anchor="middle" class="note">처음 보는 강아지</text>
+  </g>
+
+  <g transform="translate(55 210)">
+    <rect x="0" y="0" width="870" height="96" class="panel"/>
+    <text x="28" y="34" class="label">머신러닝</text>
+    <text x="28" y="62" class="note">많은 라벨 데이터로 학습</text>
+
+    <rect x="232" y="24" width="36" height="36" class="blue"/>
+    <rect x="292" y="24" width="36" height="36" class="blue"/>
+    <rect x="352" y="24" width="36" height="36" class="blue"/>
+    <text x="310" y="82" text-anchor="middle" class="note">데이터</text>
+
+    <path d="M410 48 H492" class="edge"/>
+    <rect x="510" y="20" width="145" height="56" class="purple"/>
+    <text x="582" y="45" text-anchor="middle" class="small">학습된</text>
+    <text x="582" y="63" text-anchor="middle" class="small">파라미터</text>
+
+    <path d="M655 48 H735" class="edge"/>
+    <rect x="760" y="24" width="50" height="36" class="green"/>
+    <text x="785" y="82" text-anchor="middle" class="note">새 입력 예측</text>
+  </g>
+</svg>

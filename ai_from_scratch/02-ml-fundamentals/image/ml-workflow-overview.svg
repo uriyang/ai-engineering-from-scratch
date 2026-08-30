@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="300" viewBox="0 0 980 300" role="img" aria-labelledby="title desc">
+  <title id="title">머신러닝 프로젝트 흐름</title>
+  <desc id="desc">데이터 수집부터 모니터링까지 머신러닝 프로젝트의 반복 흐름</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 16px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .note { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .box { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .accent1 { fill: #eef7ff; stroke: #3b82c4; }
+      .accent2 { fill: #fff6e8; stroke: #d98b24; }
+      .accent3 { fill: #f1fbf4; stroke: #45a36d; }
+      .edge { stroke: #3f4b63; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="980" height="300" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">머신러닝 프로젝트 흐름</text>
+
+  <g transform="translate(42 92)">
+    <rect x="0" y="0" width="116" height="64" class="box accent1"/>
+    <text x="58" y="28" text-anchor="middle" class="label">데이터 수집</text>
+    <text x="58" y="50" text-anchor="middle" class="note">원천 확보</text>
+
+    <rect x="150" y="0" width="116" height="64" class="box accent1"/>
+    <text x="208" y="28" text-anchor="middle" class="label">정제와 탐색</text>
+    <text x="208" y="50" text-anchor="middle" class="note">결측치, 분포</text>
+
+    <rect x="300" y="0" width="116" height="64" class="box accent2"/>
+    <text x="358" y="28" text-anchor="middle" class="label">특징 설계</text>
+    <text x="358" y="50" text-anchor="middle" class="note">모델 입력</text>
+
+    <rect x="450" y="0" width="116" height="64" class="box accent2"/>
+    <text x="508" y="28" text-anchor="middle" class="label">데이터 분리</text>
+    <text x="508" y="50" text-anchor="middle" class="note">훈련/검증/테스트</text>
+
+    <rect x="600" y="0" width="116" height="64" class="box accent3"/>
+    <text x="658" y="28" text-anchor="middle" class="label">모델 학습</text>
+    <text x="658" y="50" text-anchor="middle" class="note">손실 최소화</text>
+
+    <rect x="750" y="0" width="116" height="64" class="box accent3"/>
+    <text x="808" y="28" text-anchor="middle" class="label">평가</text>
+    <text x="808" y="50" text-anchor="middle" class="note">새 데이터 성능</text>
+
+    <path d="M116 32 H138" class="edge"/>
+    <path d="M266 32 H288" class="edge"/>
+    <path d="M416 32 H438" class="edge"/>
+    <path d="M566 32 H588" class="edge"/>
+    <path d="M716 32 H738" class="edge"/>
+
+    <path d="M808 72 C808 118 658 118 658 74" class="edge"/>
+    <text x="735" y="132" text-anchor="middle" class="note">성능이 부족하면 특징과 모델을 다시 조정</text>
+  </g>
+
+  <g transform="translate(260 225)">
+    <rect x="0" y="0" width="150" height="46" class="box"/>
+    <text x="75" y="29" text-anchor="middle" class="label">배포</text>
+    <path d="M150 23 H198" class="edge"/>
+    <rect x="210" y="0" width="150" height="46" class="box"/>
+    <text x="285" y="29" text-anchor="middle" class="label">모니터링</text>
+    <path d="M285 0 C285 -44 58 -44 58 -28" class="edge"/>
+  </g>
+</svg>
