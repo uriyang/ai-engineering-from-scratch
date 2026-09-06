@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">SVM 후보 경계와 최대 마진</title>
+  <desc id="desc">두 클래스를 모두 분리하는 여러 후보 선 중에서 가운데를 넓게 지나는 선 B가 가장 큰 마진을 갖는 모습을 보여준다</desc>
+  <defs>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 17px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .note { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .formula { font: 700 14px Menlo, Consolas, monospace; fill: #172033; }
+      .axis { stroke: #c8d0df; stroke-width: 1.5; }
+      .bad { stroke: #d96b6b; stroke-width: 3.5; stroke-dasharray: 8 7; }
+      .best { stroke: #172033; stroke-width: 4.5; }
+      .margin { stroke: #8b5cc7; stroke-width: 2.4; stroke-dasharray: 9 7; }
+      .guide { stroke: #d98b24; stroke-width: 2.2; stroke-dasharray: 5 6; }
+      .badge { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.4; rx: 8; }
+    </style>
+  </defs>
+  <rect width="980" height="430" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">같이 맞히는 선도 여유는 다르다</text>
+  <text x="490" y="70" text-anchor="middle" class="note">SVM은 여러 후보 중 가장 가까운 점까지의 거리가 가장 큰 경계를 선택한다</text>
+
+  <line x1="100" y1="360" x2="880" y2="360" class="axis"/>
+  <line x1="100" y1="105" x2="100" y2="360" class="axis"/>
+
+  <circle cx="210" cy="220" r="9" fill="#3b82c4"/>
+  <circle cx="250" cy="260" r="9" fill="#3b82c4"/>
+  <circle cx="280" cy="185" r="9" fill="#3b82c4"/>
+  <circle cx="325" cy="230" r="11" fill="#3b82c4" stroke="#172033" stroke-width="3"/>
+  <circle cx="235" cy="315" r="9" fill="#3b82c4"/>
+
+  <circle cx="650" cy="235" r="9" fill="#d96b6b"/>
+  <circle cx="690" cy="185" r="9" fill="#d96b6b"/>
+  <circle cx="730" cy="275" r="9" fill="#d96b6b"/>
+  <circle cx="570" cy="255" r="11" fill="#d96b6b" stroke="#172033" stroke-width="3"/>
+  <circle cx="760" cy="330" r="9" fill="#d96b6b"/>
+
+  <line x1="360" y1="360" x2="545" y2="105" class="bad"/>
+  <line x1="440" y1="360" x2="625" y2="105" class="best"/>
+  <line x1="520" y1="360" x2="705" y2="105" class="bad"/>
+
+  <line x1="372" y1="360" x2="557" y2="105" class="margin"/>
+  <line x1="508" y1="360" x2="693" y2="105" class="margin"/>
+  <line x1="325" y1="230" x2="570" y2="255" class="guide"/>
+
+  <rect x="305" y="102" width="170" height="58" class="badge"/>
+  <text x="390" y="126" text-anchor="middle" class="label">선 A</text>
+  <text x="390" y="148" text-anchor="middle" class="note">+ 클래스에 가까움</text>
+
+  <rect x="520" y="96" width="170" height="66" class="badge"/>
+  <text x="605" y="121" text-anchor="middle" class="label">선 B</text>
+  <text x="605" y="143" text-anchor="middle" class="note">가장 넓은 마진</text>
+
+  <rect x="705" y="155" width="170" height="58" class="badge"/>
+  <text x="790" y="179" text-anchor="middle" class="label">선 C</text>
+  <text x="790" y="201" text-anchor="middle" class="note">- 클래스에 가까움</text>
+
+  <text x="448" y="292" text-anchor="middle" class="formula">가장 가까운 점까지의 거리</text>
+  <text x="210" y="170" text-anchor="middle" class="note">+ 클래스</text>
+  <text x="760" y="248" text-anchor="middle" class="note">- 클래스</text>
+</svg>

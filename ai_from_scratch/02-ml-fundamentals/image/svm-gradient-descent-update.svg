@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="660" viewBox="0 0 980 660" role="img" aria-labelledby="title desc">
+  <title id="title">선형 SVM 경사하강법 업데이트</title>
+  <desc id="desc">각 샘플의 마진을 확인한 뒤 마진 밖이면 정규화만 적용하고, 마진 안쪽이면 샘플이 경계를 밀어내도록 업데이트하는 흐름</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 25px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 17px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .formula { font: 700 14px Menlo, Consolas, monospace; fill: #172033; }
+      .box { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .start { fill: #eef7ff; stroke: #3b82c4; }
+      .ok { fill: #f1fbf4; stroke: #45a36d; }
+      .bad { fill: #fff1f1; stroke: #d96b6b; }
+      .update { fill: #f5efff; stroke: #8b5cc7; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .edge { stroke: #3f4b63; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+      .boundary { stroke: #172033; stroke-width: 3.5; }
+      .margin { stroke: #8b5cc7; stroke-width: 2; stroke-dasharray: 8 7; }
+      .push { stroke: #d98b24; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .axis { stroke: #c8d0df; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="980" height="660" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">선형 SVM은 샘플마다 마진을 확인하며 경계를 고친다</text>
+  <text x="490" y="70" text-anchor="middle" class="small">마진 밖 샘플은 이미 충분히 좋고, 마진 안쪽 샘플만 경계를 강하게 움직인다</text>
+
+  <rect x="120" y="112" width="220" height="78" class="box start"/>
+  <text x="230" y="142" text-anchor="middle" class="label">샘플 하나 확인</text>
+  <text x="230" y="168" text-anchor="middle" class="formula">margin = y*f(x)</text>
+
+  <rect x="380" y="102" width="220" height="98" class="box update"/>
+  <text x="490" y="133" text-anchor="middle" class="label">마진 기준</text>
+  <text x="490" y="160" text-anchor="middle" class="formula">margin >= 1 ?</text>
+  <text x="490" y="184" text-anchor="middle" class="small">충분히 멀리 있나?</text>
+
+  <path d="M340 151 H368" class="edge"/>
+
+  <rect x="145" y="250" width="300" height="92" class="box ok"/>
+  <text x="295" y="280" text-anchor="middle" class="label">예: 마진 밖</text>
+  <text x="295" y="306" text-anchor="middle" class="formula">dL/dw = lambda*w</text>
+  <text x="295" y="328" text-anchor="middle" class="small">경계를 크게 밀 필요 없음</text>
+
+  <rect x="500" y="250" width="330" height="112" class="box bad"/>
+  <text x="665" y="280" text-anchor="middle" class="label">아니오: 마진 안쪽</text>
+  <text x="665" y="306" text-anchor="middle" class="formula">dL/dw = lambda*w - y*x</text>
+  <text x="665" y="330" text-anchor="middle" class="small">또는 오분류라면 샘플이</text>
+  <text x="665" y="350" text-anchor="middle" class="small">경계를 밀어낸다</text>
+
+  <path d="M450 200 C420 226 365 236 305 250" class="edge"/>
+  <path d="M530 200 C565 226 615 236 660 250" class="edge"/>
+
+  <rect x="74" y="420" width="380" height="190" class="panel"/>
+  <text x="264" y="450" text-anchor="middle" class="label">마진 밖 샘플</text>
+  <text x="264" y="472" text-anchor="middle" class="small">힌지 손실은 0, 정규화만 적용</text>
+  <g transform="translate(138 498)">
+    <line x1="0" y1="80" x2="245" y2="80" class="axis"/>
+    <line x1="38" y1="0" x2="38" y2="80" class="axis"/>
+    <line x1="94" y1="82" x2="154" y2="0" class="margin"/>
+    <line x1="124" y1="82" x2="184" y2="0" class="boundary"/>
+    <line x1="154" y1="82" x2="214" y2="0" class="margin"/>
+    <circle cx="72" cy="45" r="8" fill="#3b82c4"/>
+    <circle cx="86" cy="18" r="8" fill="#3b82c4"/>
+    <circle cx="190" cy="58" r="8" fill="#d96b6b"/>
+    <circle cx="207" cy="28" r="8" fill="#d96b6b"/>
+  </g>
+
+  <rect x="500" y="420" width="380" height="190" class="panel"/>
+  <text x="690" y="450" text-anchor="middle" class="label">마진 안쪽 샘플</text>
+  <text x="690" y="472" text-anchor="middle" class="small">힌지 손실이 생기고 경계를 밀어냄</text>
+  <g transform="translate(564 498)">
+    <line x1="0" y1="80" x2="245" y2="80" class="axis"/>
+    <line x1="38" y1="0" x2="38" y2="80" class="axis"/>
+    <line x1="100" y1="82" x2="160" y2="0" class="margin"/>
+    <line x1="130" y1="82" x2="190" y2="0" class="boundary"/>
+    <line x1="160" y1="82" x2="220" y2="0" class="margin"/>
+    <circle cx="84" cy="58" r="8" fill="#3b82c4"/>
+    <circle cx="118" cy="45" r="11" fill="#3b82c4" stroke="#172033" stroke-width="3"/>
+    <circle cx="193" cy="58" r="8" fill="#d96b6b"/>
+    <circle cx="214" cy="28" r="8" fill="#d96b6b"/>
+    <path d="M118 45 C140 36 156 28 174 12" class="push"/>
+  </g>
+</svg>
