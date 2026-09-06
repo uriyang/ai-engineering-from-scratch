@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">랜덤 포레스트 학습과 예측 집계</title>
+  <desc id="desc">훈련 데이터에서 여러 부트스트랩 샘플을 만들고, 각 샘플로 학습한 트리 예측을 다수결 또는 평균으로 집계하는 흐름</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 16px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 13px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .box { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .data { fill: #eef7ff; stroke: #3b82c4; }
+      .boot { fill: #fff6e8; stroke: #d98b24; }
+      .tree { fill: #f1fbf4; stroke: #45a36d; }
+      .vote { fill: #f5efff; stroke: #8b5cc7; }
+      .edge { stroke: #3f4b63; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="980" height="430" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">랜덤 포레스트: 여러 트리의 판단을 모은다</text>
+
+  <rect x="400" y="82" width="180" height="58" class="box data"/>
+  <text x="490" y="116" text-anchor="middle" class="label">훈련 데이터</text>
+
+  <g transform="translate(75 190)">
+    <rect x="0" y="0" width="160" height="58" class="box boot"/>
+    <text x="80" y="24" text-anchor="middle" class="label">부트스트랩 1</text>
+    <text x="80" y="44" text-anchor="middle" class="small">복원추출</text>
+
+    <rect x="245" y="0" width="160" height="58" class="box boot"/>
+    <text x="325" y="24" text-anchor="middle" class="label">부트스트랩 2</text>
+    <text x="325" y="44" text-anchor="middle" class="small">복원추출</text>
+
+    <rect x="490" y="0" width="160" height="58" class="box boot"/>
+    <text x="570" y="24" text-anchor="middle" class="label">부트스트랩 3</text>
+    <text x="570" y="44" text-anchor="middle" class="small">복원추출</text>
+
+    <rect x="735" y="0" width="160" height="58" class="box boot"/>
+    <text x="815" y="24" text-anchor="middle" class="label">부트스트랩 N</text>
+    <text x="815" y="44" text-anchor="middle" class="small">복원추출</text>
+  </g>
+
+  <g transform="translate(75 300)">
+    <rect x="0" y="0" width="160" height="58" class="box tree"/>
+    <text x="80" y="23" text-anchor="middle" class="label">트리 1</text>
+    <text x="80" y="43" text-anchor="middle" class="small">무작위 특징 후보</text>
+
+    <rect x="245" y="0" width="160" height="58" class="box tree"/>
+    <text x="325" y="23" text-anchor="middle" class="label">트리 2</text>
+    <text x="325" y="43" text-anchor="middle" class="small">무작위 특징 후보</text>
+
+    <rect x="490" y="0" width="160" height="58" class="box tree"/>
+    <text x="570" y="23" text-anchor="middle" class="label">트리 3</text>
+    <text x="570" y="43" text-anchor="middle" class="small">무작위 특징 후보</text>
+
+    <rect x="735" y="0" width="160" height="58" class="box tree"/>
+    <text x="815" y="23" text-anchor="middle" class="label">트리 N</text>
+    <text x="815" y="43" text-anchor="middle" class="small">무작위 특징 후보</text>
+  </g>
+
+  <rect x="400" y="378" width="180" height="42" class="box vote"/>
+  <text x="490" y="405" text-anchor="middle" class="label">다수결 또는 평균</text>
+
+  <path d="M490 140 C320 154 180 160 155 190" class="edge"/>
+  <path d="M490 140 C420 158 405 164 400 190" class="edge"/>
+  <path d="M490 140 C560 158 575 164 645 190" class="edge"/>
+  <path d="M490 140 C660 154 800 160 890 190" class="edge"/>
+
+  <path d="M155 248 V300" class="edge"/>
+  <path d="M400 248 V300" class="edge"/>
+  <path d="M645 248 V300" class="edge"/>
+  <path d="M890 248 V300" class="edge"/>
+
+  <path d="M155 358 C250 378 330 386 400 396" class="edge"/>
+  <path d="M400 358 C425 372 450 382 470 378" class="edge"/>
+  <path d="M645 358 C610 374 560 386 540 378" class="edge"/>
+  <path d="M890 358 C735 382 645 394 580 399" class="edge"/>
+</svg>

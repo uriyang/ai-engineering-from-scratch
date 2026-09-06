@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
+  <title id="title">의사결정트리 예측 흐름</title>
+  <desc id="desc">나이, 소득, 신용점수 조건을 따라 승인 또는 거절 리프에 도달하는 의사결정트리</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 18px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .edge-label { font: 700 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .note { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .node { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.6; rx: 8; }
+      .question { fill: #eef7ff; stroke: #3b82c4; }
+      .approve { fill: #f1fbf4; stroke: #45a36d; }
+      .deny { fill: #fff1f1; stroke: #d96b6b; }
+      .edge { stroke: #3f4b63; stroke-width: 2.1; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="980" height="420" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">의사결정트리 예측 흐름</text>
+  <text x="490" y="70" text-anchor="middle" class="note">각 질문은 특징 공간을 둘로 나누고, 리프 노드가 최종 예측을 낸다</text>
+
+  <rect x="390" y="100" width="200" height="58" class="node question"/>
+  <text x="490" y="136" text-anchor="middle" class="label">나이 &lt; 30?</text>
+
+  <rect x="170" y="220" width="200" height="58" class="node question"/>
+  <text x="270" y="256" text-anchor="middle" class="label">소득 &gt; 5000만?</text>
+
+  <rect x="610" y="220" width="200" height="58" class="node question"/>
+  <text x="710" y="256" text-anchor="middle" class="label">신용점수 &gt; 700?</text>
+
+  <rect x="65" y="340" width="140" height="50" class="node approve"/>
+  <text x="135" y="371" text-anchor="middle" class="label">승인</text>
+  <rect x="335" y="340" width="140" height="50" class="node deny"/>
+  <text x="405" y="371" text-anchor="middle" class="label">거절</text>
+  <rect x="505" y="340" width="140" height="50" class="node approve"/>
+  <text x="575" y="371" text-anchor="middle" class="label">승인</text>
+  <rect x="775" y="340" width="140" height="50" class="node deny"/>
+  <text x="845" y="371" text-anchor="middle" class="label">거절</text>
+
+  <path d="M440 158 C390 182 330 195 285 220" class="edge"/>
+  <text x="370" y="184" class="edge-label">예</text>
+  <path d="M540 158 C590 182 650 195 695 220" class="edge"/>
+  <text x="610" y="184" class="edge-label">아니오</text>
+
+  <path d="M225 278 C190 304 160 318 140 340" class="edge"/>
+  <text x="168" y="316" class="edge-label">예</text>
+  <path d="M315 278 C350 304 380 318 400 340" class="edge"/>
+  <text x="360" y="316" class="edge-label">아니오</text>
+
+  <path d="M665 278 C630 304 600 318 580 340" class="edge"/>
+  <text x="608" y="316" class="edge-label">예</text>
+  <path d="M755 278 C790 304 820 318 840 340" class="edge"/>
+  <text x="800" y="316" class="edge-label">아니오</text>
+</svg>
