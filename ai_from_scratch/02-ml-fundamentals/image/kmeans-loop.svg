@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="360" viewBox="0 0 980 360" role="img" aria-labelledby="title desc">
+  <title id="title">K-Means 반복 학습</title>
+  <desc id="desc">중심점을 초기화한 뒤 가까운 중심에 점을 배정하고, 각 군집의 평균으로 중심점을 다시 계산하는 과정을 반복한다</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 16px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .box { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .blue { fill: #eef7ff; stroke: #3b82c4; }
+      .orange { fill: #fff6e8; stroke: #d98b24; }
+      .green { fill: #f1fbf4; stroke: #45a36d; }
+      .purple { fill: #f5efff; stroke: #8b5cc7; }
+      .edge { stroke: #3f4b63; stroke-width: 2.2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="980" height="360" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">K-Means는 배정과 중심 갱신을 반복한다</text>
+
+  <rect x="92" y="116" width="170" height="72" class="box blue"/>
+  <text x="177" y="144" text-anchor="middle" class="label">중심 초기화</text>
+  <text x="177" y="168" text-anchor="middle" class="small">K개 centroid</text>
+
+  <rect x="344" y="116" width="170" height="72" class="box orange"/>
+  <text x="429" y="144" text-anchor="middle" class="label">점 배정</text>
+  <text x="429" y="168" text-anchor="middle" class="small">가장 가까운 중심</text>
+
+  <rect x="596" y="116" width="170" height="72" class="box green"/>
+  <text x="681" y="144" text-anchor="middle" class="label">중심 갱신</text>
+  <text x="681" y="168" text-anchor="middle" class="small">군집 평균</text>
+
+  <rect x="410" y="250" width="170" height="62" class="box purple"/>
+  <text x="495" y="276" text-anchor="middle" class="label">수렴 확인</text>
+  <text x="495" y="298" text-anchor="middle" class="small">변화가 작으면 종료</text>
+
+  <path d="M262 152 H332" class="edge"/>
+  <path d="M514 152 H584" class="edge"/>
+  <path d="M681 188 C670 230 620 250 580 270" class="edge"/>
+  <path d="M410 282 C310 282 240 226 234 188" class="edge"/>
+
+  <g transform="translate(804 104)">
+    <rect x="0" y="0" width="120" height="120" fill="#ffffff" stroke="#d7ddea" stroke-width="1.5" rx="8"/>
+    <circle cx="28" cy="32" r="6" fill="#3b82c4"/>
+    <circle cx="42" cy="52" r="6" fill="#3b82c4"/>
+    <circle cx="32" cy="78" r="6" fill="#3b82c4"/>
+    <circle cx="85" cy="35" r="6" fill="#d96b6b"/>
+    <circle cx="96" cy="62" r="6" fill="#d96b6b"/>
+    <circle cx="78" cy="82" r="6" fill="#d96b6b"/>
+    <text x="34" y="60" text-anchor="middle" class="label" fill="#172033">×</text>
+    <text x="88" y="63" text-anchor="middle" class="label" fill="#172033">×</text>
+  </g>
+</svg>

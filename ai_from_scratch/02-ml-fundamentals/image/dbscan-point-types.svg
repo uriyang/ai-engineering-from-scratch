@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
+  <title id="title">DBSCAN의 점 유형</title>
+  <desc id="desc">eps 반경 안에 충분한 이웃이 있는 핵심점, 핵심점 근처의 경계점, 어떤 밀집 영역에도 속하지 않는 노이즈점을 보여준다</desc>
+  <defs>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 17px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .eps { fill: #eef7ff; stroke: #3b82c4; stroke-width: 2; stroke-dasharray: 8 7; }
+    </style>
+  </defs>
+
+  <rect width="980" height="420" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">DBSCAN은 밀집 영역을 군집으로 본다</text>
+
+  <rect x="70" y="82" width="510" height="286" class="panel"/>
+  <text x="325" y="114" text-anchor="middle" class="label">eps 반경 안의 이웃 수로 점의 역할을 정한다</text>
+  <circle cx="306" cy="220" r="88" class="eps"/>
+  <text x="400" y="154" class="small">eps 반경</text>
+
+  <circle cx="286" cy="208" r="8" fill="#3b82c4"/>
+  <circle cx="311" cy="194" r="8" fill="#3b82c4"/>
+  <circle cx="332" cy="218" r="8" fill="#3b82c4"/>
+  <circle cx="306" cy="242" r="8" fill="#3b82c4"/>
+  <circle cx="266" cy="238" r="8" fill="#3b82c4"/>
+  <circle cx="370" cy="266" r="9" fill="#45a36d" stroke="#172033" stroke-width="2"/>
+  <circle cx="495" cy="150" r="9" fill="#d96b6b" stroke="#172033" stroke-width="2"/>
+
+  <circle cx="160" cy="286" r="8" fill="#3b82c4"/>
+  <circle cx="186" cy="262" r="8" fill="#3b82c4"/>
+  <circle cx="144" cy="244" r="8" fill="#3b82c4"/>
+  <circle cx="188" cy="308" r="8" fill="#3b82c4"/>
+  <circle cx="146" cy="310" r="8" fill="#3b82c4"/>
+
+  <rect x="620" y="92" width="300" height="78" class="panel"/>
+  <circle cx="650" cy="131" r="8" fill="#3b82c4"/>
+  <text x="678" y="119" class="label">핵심점</text>
+  <text x="678" y="143" class="small">eps 안에 min_samples개 이상의</text>
+  <text x="678" y="160" class="small">이웃이 있는 점</text>
+
+  <rect x="620" y="190" width="300" height="78" class="panel"/>
+  <circle cx="650" cy="229" r="8" fill="#45a36d" stroke="#172033" stroke-width="2"/>
+  <text x="678" y="217" class="label">경계점</text>
+  <text x="678" y="241" class="small">핵심점 근처에 있지만</text>
+  <text x="678" y="258" class="small">자기 주변은 덜 조밀한 점</text>
+
+  <rect x="620" y="288" width="300" height="78" class="panel"/>
+  <circle cx="650" cy="327" r="8" fill="#d96b6b" stroke="#172033" stroke-width="2"/>
+  <text x="678" y="315" class="label">노이즈</text>
+  <text x="678" y="339" class="small">어떤 밀집 영역에도</text>
+  <text x="678" y="356" class="small">속하지 않는 점</text>
+</svg>
