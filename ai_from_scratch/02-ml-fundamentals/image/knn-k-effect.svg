@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="340" viewBox="0 0 980 340" role="img" aria-labelledby="title desc">
+  <title id="title">K 값에 따른 KNN 경계 변화</title>
+  <desc id="desc">K가 작으면 결정 경계가 들쭉날쭉하고, 적당한 K는 부드러운 패턴을 잡으며, 너무 큰 K는 다수 클래스로 치우치는 모습을 비교한다</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 17px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .edge { stroke: #3f4b63; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .boundary { stroke: #8b5cc7; stroke-width: 3; fill: none; }
+    </style>
+  </defs>
+  <rect width="980" height="340" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">K는 경계의 거칠기를 조절한다</text>
+
+  <g transform="translate(58 92)">
+    <rect width="250" height="190" class="panel"/>
+    <text x="125" y="32" text-anchor="middle" class="label">K = 1</text>
+    <text x="125" y="54" text-anchor="middle" class="small">훈련 점 하나하나에 민감</text>
+    <path d="M36 142 C58 100 86 134 105 86 C126 38 150 102 172 62 C192 30 210 78 224 44" class="boundary"/>
+    <circle cx="52" cy="120" r="6" fill="#3b82c4"/>
+    <circle cx="82" cy="86" r="6" fill="#3b82c4"/>
+    <circle cx="122" cy="130" r="6" fill="#d96b6b"/>
+    <circle cx="170" cy="112" r="6" fill="#d96b6b"/>
+    <circle cx="205" cy="76" r="6" fill="#3b82c4"/>
+    <text x="125" y="174" text-anchor="middle" class="small">과적합 위험</text>
+  </g>
+
+  <g transform="translate(365 92)">
+    <rect width="250" height="190" class="panel"/>
+    <text x="125" y="32" text-anchor="middle" class="label">적당한 K</text>
+    <text x="125" y="54" text-anchor="middle" class="small">지역 패턴을 부드럽게 반영</text>
+    <path d="M36 136 C72 92 105 80 134 98 C162 116 190 102 222 64" class="boundary"/>
+    <circle cx="56" cy="122" r="6" fill="#3b82c4"/>
+    <circle cx="86" cy="96" r="6" fill="#3b82c4"/>
+    <circle cx="130" cy="132" r="6" fill="#d96b6b"/>
+    <circle cx="174" cy="118" r="6" fill="#d96b6b"/>
+    <circle cx="202" cy="76" r="6" fill="#3b82c4"/>
+    <text x="125" y="174" text-anchor="middle" class="small">균형 지점</text>
+  </g>
+
+  <g transform="translate(672 92)">
+    <rect width="250" height="190" class="panel"/>
+    <text x="125" y="32" text-anchor="middle" class="label">K = N</text>
+    <text x="125" y="54" text-anchor="middle" class="small">전체 다수 클래스로 치우침</text>
+    <path d="M38 112 H222" class="boundary"/>
+    <circle cx="56" cy="122" r="6" fill="#3b82c4"/>
+    <circle cx="86" cy="96" r="6" fill="#3b82c4"/>
+    <circle cx="130" cy="132" r="6" fill="#d96b6b"/>
+    <circle cx="174" cy="118" r="6" fill="#d96b6b"/>
+    <circle cx="202" cy="76" r="6" fill="#3b82c4"/>
+    <text x="125" y="174" text-anchor="middle" class="small">과소적합 위험</text>
+  </g>
+
+  <path d="M318 185 H352" class="edge"/>
+  <path d="M625 185 H659" class="edge"/>
+</svg>

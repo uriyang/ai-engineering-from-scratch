@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="460" viewBox="0 0 980 460" role="img" aria-labelledby="title desc">
+  <title id="title">KNN 예측 흐름</title>
+  <desc id="desc">쿼리 포인트에서 모든 훈련 포인트까지 거리를 계산하고, 가까운 K개를 골라 분류는 다수결, 회귀는 평균으로 예측하는 흐름</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 16px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .box { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .blue { fill: #eef7ff; stroke: #3b82c4; }
+      .orange { fill: #fff6e8; stroke: #d98b24; }
+      .green { fill: #f1fbf4; stroke: #45a36d; }
+      .purple { fill: #f5efff; stroke: #8b5cc7; }
+      .red { fill: #fff1f1; stroke: #d96b6b; }
+      .edge { stroke: #3f4b63; stroke-width: 2.1; fill: none; marker-end: url(#arrow); }
+      .radius { fill: none; stroke: #8b5cc7; stroke-width: 2; stroke-dasharray: 7 7; }
+      .thin { stroke: #c8d0df; stroke-width: 1.5; }
+    </style>
+  </defs>
+
+  <rect width="980" height="460" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">KNN은 가까운 이웃을 찾아 예측한다</text>
+
+  <rect x="50" y="96" width="145" height="72" class="box blue"/>
+  <text x="122" y="124" text-anchor="middle" class="label">새 데이터</text>
+  <text x="122" y="148" text-anchor="middle" class="small">query point</text>
+
+  <rect x="242" y="96" width="158" height="72" class="box orange"/>
+  <text x="321" y="124" text-anchor="middle" class="label">거리 계산</text>
+  <text x="321" y="148" text-anchor="middle" class="small">모든 훈련 포인트</text>
+
+  <rect x="448" y="96" width="145" height="72" class="box green"/>
+  <text x="520" y="124" text-anchor="middle" class="label">정렬</text>
+  <text x="520" y="148" text-anchor="middle" class="small">가까운 순서</text>
+
+  <rect x="640" y="96" width="158" height="72" class="box purple"/>
+  <text x="719" y="124" text-anchor="middle" class="label">K개 선택</text>
+  <text x="719" y="148" text-anchor="middle" class="small">nearest neighbors</text>
+
+  <rect x="825" y="66" width="110" height="56" class="box red"/>
+  <text x="880" y="90" text-anchor="middle" class="label">분류</text>
+  <text x="880" y="110" text-anchor="middle" class="small">다수결</text>
+
+  <rect x="825" y="156" width="110" height="56" class="box red"/>
+  <text x="880" y="180" text-anchor="middle" class="label">회귀</text>
+  <text x="880" y="200" text-anchor="middle" class="small">평균</text>
+
+  <path d="M195 132 H230" class="edge"/>
+  <path d="M400 132 H436" class="edge"/>
+  <path d="M593 132 H628" class="edge"/>
+  <path d="M798 118 C812 104 819 96 825 94" class="edge"/>
+  <path d="M798 146 C814 160 820 172 825 184" class="edge"/>
+
+  <rect x="90" y="252" width="800" height="160" class="panel"/>
+  <text x="490" y="284" text-anchor="middle" class="label">아래 예시에서는 보라색 원 안의 가까운 점들이 예측을 결정한다</text>
+
+  <g transform="translate(210 310)">
+    <line x1="0" y1="72" x2="560" y2="72" class="thin"/>
+    <line x1="40" y1="0" x2="40" y2="96" class="thin"/>
+
+    <circle cx="132" cy="48" r="8" fill="#172033"/>
+    <text x="132" y="28" text-anchor="middle" class="small">query</text>
+    <circle cx="132" cy="48" r="74" class="radius"/>
+
+    <circle cx="170" cy="36" r="7" fill="#3b82c4"/>
+    <circle cx="202" cy="56" r="7" fill="#3b82c4"/>
+    <circle cx="250" cy="42" r="7" fill="#d96b6b"/>
+    <circle cx="292" cy="70" r="7" fill="#d96b6b"/>
+    <circle cx="338" cy="38" r="7" fill="#45a36d"/>
+    <circle cx="420" cy="58" r="7" fill="#d96b6b"/>
+    <circle cx="470" cy="26" r="7" fill="#45a36d"/>
+
+    <text x="132" y="128" text-anchor="middle" class="small">가까운 K개 선택</text>
+    <text x="385" y="128" text-anchor="middle" class="small">먼 점들은 영향이 작거나 제외된다</text>
+  </g>
+</svg>

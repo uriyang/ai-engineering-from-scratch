@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="390" viewBox="0 0 980 390" role="img" aria-labelledby="title desc">
+  <title id="title">KD-tree 공간 분할</title>
+  <desc id="desc">KD-tree가 축을 번갈아 가며 중앙값 기준으로 공간을 나누고, 쿼리할 때 가까울 가능성이 없는 영역을 건너뛰는 모습을 보여준다</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 16px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .cell { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; }
+      .splitx { stroke: #3b82c4; stroke-width: 3; }
+      .splity { stroke: #d98b24; stroke-width: 3; }
+      .box { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .edge { stroke: #3f4b63; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="980" height="390" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">KD-tree는 공간을 축 기준으로 반복해서 나눈다</text>
+
+  <g transform="translate(70 88)">
+    <rect x="0" y="0" width="300" height="240" class="cell"/>
+    <line x1="150" y1="0" x2="150" y2="240" class="splitx"/>
+    <line x1="0" y1="118" x2="150" y2="118" class="splity"/>
+    <line x1="150" y1="78" x2="300" y2="78" class="splity"/>
+    <circle cx="60" cy="55" r="6" fill="#3b82c4"/>
+    <circle cx="88" cy="150" r="6" fill="#3b82c4"/>
+    <circle cx="210" cy="45" r="6" fill="#d96b6b"/>
+    <circle cx="250" cy="126" r="6" fill="#d96b6b"/>
+    <circle cx="214" cy="194" r="6" fill="#45a36d"/>
+    <circle cx="124" cy="96" r="8" fill="#172033"/>
+    <text x="150" y="270" text-anchor="middle" class="small">먼 영역은 확인하지 않고 건너뛸 수 있다</text>
+  </g>
+
+  <g transform="translate(465 80)">
+    <rect x="150" y="0" width="210" height="50" class="box"/>
+    <text x="255" y="31" text-anchor="middle" class="label">x1 기준 분할</text>
+
+    <rect x="40" y="96" width="180" height="50" class="box"/>
+    <text x="130" y="127" text-anchor="middle" class="label">x2 기준 분할</text>
+    <rect x="290" y="96" width="180" height="50" class="box"/>
+    <text x="380" y="127" text-anchor="middle" class="label">x2 기준 분할</text>
+
+    <rect x="0" y="192" width="120" height="44" class="box"/>
+    <text x="60" y="220" text-anchor="middle" class="small">리프</text>
+    <rect x="140" y="192" width="120" height="44" class="box"/>
+    <text x="200" y="220" text-anchor="middle" class="small">리프</text>
+    <rect x="280" y="192" width="120" height="44" class="box"/>
+    <text x="340" y="220" text-anchor="middle" class="small">리프</text>
+    <rect x="420" y="192" width="120" height="44" class="box"/>
+    <text x="480" y="220" text-anchor="middle" class="small">리프</text>
+
+    <path d="M230 50 C200 72 170 82 138 96" class="edge"/>
+    <path d="M280 50 C318 72 350 82 376 96" class="edge"/>
+    <path d="M104 146 C84 164 70 176 62 192" class="edge"/>
+    <path d="M154 146 C172 164 188 176 198 192" class="edge"/>
+    <path d="M354 146 C342 164 338 176 340 192" class="edge"/>
+    <path d="M404 146 C438 164 466 176 480 192" class="edge"/>
+  </g>
+</svg>

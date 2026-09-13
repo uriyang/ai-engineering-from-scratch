@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="540" viewBox="0 0 980 540" role="img" aria-labelledby="title desc">
+  <title id="title">거리 함수 비교</title>
+  <desc id="desc">L2, L1, 코사인, 민코프스키 거리의 직관적 차이를 네 개 패널로 비교한다</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 17px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .formula { font: 700 13px Menlo, Consolas, monospace; fill: #172033; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .formulaBox { fill: #f7f8fb; stroke: #d7ddea; stroke-width: 1; rx: 6; }
+      .axis { stroke: #c8d0df; stroke-width: 1.4; }
+      .l2 { stroke: #3b82c4; stroke-width: 4; fill: none; }
+      .l1 { stroke: #d98b24; stroke-width: 4; fill: none; }
+      .cos { stroke: #45a36d; stroke-width: 4; fill: none; marker-end: url(#arrow); }
+      .mink { stroke: #8b5cc7; stroke-width: 3; fill: none; }
+      .dash { stroke-dasharray: 7 7; }
+    </style>
+  </defs>
+
+  <rect width="980" height="540" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">거리 함수마다 “가깝다”의 의미가 다르다</text>
+
+  <g transform="translate(60 86)">
+    <rect width="400" height="180" class="panel"/>
+    <text x="200" y="30" text-anchor="middle" class="label">L2: 유클리드 거리</text>
+    <text x="200" y="54" text-anchor="middle" class="small">두 점 사이의 직선 거리</text>
+    <line x1="54" y1="124" x2="330" y2="124" class="axis"/>
+    <line x1="72" y1="68" x2="72" y2="134" class="axis"/>
+    <circle cx="120" cy="108" r="7" fill="#172033"/>
+    <circle cx="300" cy="74" r="7" fill="#3b82c4"/>
+    <line x1="120" y1="108" x2="300" y2="74" class="l2"/>
+    <rect x="114" y="142" width="172" height="26" class="formulaBox"/>
+    <text x="200" y="160" text-anchor="middle" class="formula">sqrt(sum(diff^2))</text>
+  </g>
+
+  <g transform="translate(520 86)">
+    <rect width="400" height="180" class="panel"/>
+    <text x="200" y="30" text-anchor="middle" class="label">L1: 맨해튼 거리</text>
+    <text x="200" y="54" text-anchor="middle" class="small">축을 따라 이동한 절댓값 차이 합</text>
+    <line x1="54" y1="124" x2="330" y2="124" class="axis"/>
+    <line x1="72" y1="68" x2="72" y2="134" class="axis"/>
+    <circle cx="120" cy="108" r="7" fill="#172033"/>
+    <circle cx="300" cy="74" r="7" fill="#d98b24"/>
+    <path d="M120 108 H300 V74" class="l1"/>
+    <rect x="122" y="142" width="156" height="26" class="formulaBox"/>
+    <text x="200" y="160" text-anchor="middle" class="formula">sum(abs(diff))</text>
+  </g>
+
+  <g transform="translate(60 302)">
+    <rect width="400" height="180" class="panel"/>
+    <text x="200" y="30" text-anchor="middle" class="label">코사인 거리</text>
+    <text x="200" y="54" text-anchor="middle" class="small">크기보다 방향의 차이를 본다</text>
+    <line x1="70" y1="124" x2="330" y2="124" class="axis"/>
+    <line x1="90" y1="72" x2="90" y2="134" class="axis"/>
+    <circle cx="90" cy="124" r="5" fill="#172033"/>
+    <path d="M90 124 L252 80" class="cos"/>
+    <path d="M90 124 L310 100" class="cos dash"/>
+    <path d="M142 110 C156 96 178 88 202 86" stroke="#45a36d" stroke-width="2" fill="none"/>
+    <text x="165" y="94" text-anchor="middle" class="small">각도</text>
+    <rect x="130" y="142" width="140" height="26" class="formulaBox"/>
+    <text x="200" y="160" text-anchor="middle" class="formula">1 - cos(theta)</text>
+  </g>
+
+  <g transform="translate(520 302)">
+    <rect width="400" height="180" class="panel"/>
+    <text x="200" y="30" text-anchor="middle" class="label">민코프스키 거리</text>
+    <text x="200" y="54" text-anchor="middle" class="small">p 값으로 거리의 성격을 조절한다</text>
+    <line x1="54" y1="124" x2="330" y2="124" class="axis"/>
+    <line x1="72" y1="72" x2="72" y2="134" class="axis"/>
+    <rect x="108" y="82" width="70" height="42" class="mink dash"/>
+    <circle cx="220" cy="103" r="34" class="mink"/>
+    <path d="M278 122 C292 104 308 92 328 84" class="mink"/>
+    <text x="143" y="76" text-anchor="middle" class="small">p=1</text>
+    <text x="220" y="72" text-anchor="middle" class="small">p=2</text>
+    <text x="312" y="76" text-anchor="middle" class="small">다른 p</text>
+    <rect x="126" y="142" width="148" height="26" class="formulaBox"/>
+    <text x="200" y="160" text-anchor="middle" class="formula">p=1, p=2, ...</text>
+  </g>
+</svg>
