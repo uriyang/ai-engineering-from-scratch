@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="520" viewBox="0 0 980 520" role="img" aria-labelledby="title desc">
+  <title id="title">정규화 방법 비교</title>
+  <desc id="desc">L2, L1, Dropout, 조기 종료가 모델의 자유도를 제한해 분산을 줄이는 방식을 네 개 패널로 설명한다</desc>
+  <defs>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 17px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .formula { font: 700 13px Menlo, Consolas, monospace; fill: #172033; }
+      .panel { fill: #ffffff; stroke: #d7ddea; stroke-width: 1.5; rx: 8; }
+      .axis { stroke: #c8d0df; stroke-width: 1.5; }
+      .blue { stroke: #3b82c4; fill: #eef7ff; }
+      .orange { stroke: #d98b24; fill: #fff6e8; }
+      .green { stroke: #45a36d; fill: #f1fbf4; }
+      .purple { stroke: #8b5cc7; fill: #f5efff; }
+      .red { stroke: #d96b6b; fill: #fff1f1; }
+      .line { fill: none; stroke-width: 3.5; }
+      .dash { stroke-dasharray: 7 7; }
+      .weight { fill: #3b82c4; }
+      .zero { fill: #d7ddea; }
+      .off { fill: #ffffff; stroke: #d96b6b; stroke-width: 2.5; }
+      .on { fill: #3b82c4; }
+      .edge { stroke: #9aa7bd; stroke-width: 2; }
+      .stop { stroke: #d96b6b; stroke-width: 3; stroke-dasharray: 8 7; }
+    </style>
+  </defs>
+
+  <rect width="980" height="520" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">정규화는 모델이 노이즈를 쫓지 못하게 제약을 건다</text>
+
+  <g transform="translate(60 86)">
+    <rect width="400" height="170" class="panel"/>
+    <text x="200" y="30" text-anchor="middle" class="label">L2 / Ridge</text>
+    <text x="200" y="54" text-anchor="middle" class="small">큰 가중치를 전체적으로 작게 만든다</text>
+    <rect x="70" y="88" width="32" height="46" class="blue" rx="5"/>
+    <rect x="118" y="80" width="32" height="54" class="blue" rx="5"/>
+    <rect x="166" y="72" width="32" height="62" class="blue" rx="5"/>
+    <text x="134" y="150" text-anchor="middle" class="small">전</text>
+    <rect x="246" y="104" width="26" height="30" class="purple" rx="5"/>
+    <rect x="286" y="100" width="26" height="34" class="purple" rx="5"/>
+    <rect x="326" y="96" width="26" height="38" class="purple" rx="5"/>
+    <text x="300" y="150" text-anchor="middle" class="small">후</text>
+    <rect x="154" y="138" width="92" height="24" fill="#f7f8fb" stroke="#d7ddea" stroke-width="1" rx="6"/>
+    <text x="200" y="155" text-anchor="middle" class="formula">큰 w 감소</text>
+  </g>
+
+  <g transform="translate(520 86)">
+    <rect width="400" height="170" class="panel"/>
+    <text x="200" y="30" text-anchor="middle" class="label">L1 / Lasso</text>
+    <text x="200" y="54" text-anchor="middle" class="small">중요하지 않은 가중치를 0으로 만든다</text>
+    <rect x="72" y="78" width="28" height="58" class="blue" rx="5"/>
+    <rect x="112" y="102" width="28" height="34" class="blue" rx="5"/>
+    <rect x="152" y="90" width="28" height="46" class="blue" rx="5"/>
+    <rect x="192" y="116" width="28" height="20" class="blue" rx="5"/>
+    <text x="146" y="154" text-anchor="middle" class="small">전</text>
+    <rect x="262" y="78" width="28" height="58" class="orange" rx="5"/>
+    <rect x="304" y="132" width="28" height="4" class="zero" rx="2"/>
+    <rect x="346" y="92" width="28" height="44" class="orange" rx="5"/>
+    <text x="318" y="154" text-anchor="middle" class="small">후</text>
+    <text x="200" y="74" text-anchor="middle" class="formula">일부 w = 0</text>
+  </g>
+
+  <g transform="translate(60 300)">
+    <rect width="400" height="170" class="panel"/>
+    <text x="200" y="30" text-anchor="middle" class="label">Dropout</text>
+    <text x="200" y="54" text-anchor="middle" class="small">훈련 중 일부 뉴런을 무작위로 끈다</text>
+    <line x1="105" y1="92" x2="200" y2="82" class="edge"/>
+    <line x1="105" y1="92" x2="200" y2="122" class="edge"/>
+    <line x1="105" y1="122" x2="200" y2="82" class="edge"/>
+    <line x1="105" y1="122" x2="200" y2="122" class="edge"/>
+    <line x1="200" y1="82" x2="292" y2="104" class="edge"/>
+    <line x1="200" y1="122" x2="292" y2="104" class="edge"/>
+    <circle cx="105" cy="92" r="12" class="on"/>
+    <circle cx="105" cy="122" r="12" class="on"/>
+    <circle cx="200" cy="82" r="12" class="off"/>
+    <line x1="192" y1="74" x2="208" y2="90" stroke="#d96b6b" stroke-width="2.5"/>
+    <line x1="208" y1="74" x2="192" y2="90" stroke="#d96b6b" stroke-width="2.5"/>
+    <circle cx="200" cy="122" r="12" class="on"/>
+    <circle cx="292" cy="104" r="12" class="on"/>
+    <text x="200" y="154" text-anchor="middle" class="small">특정 경로에만 의존하지 않게 함</text>
+  </g>
+
+  <g transform="translate(520 300)">
+    <rect width="400" height="170" class="panel"/>
+    <text x="200" y="30" text-anchor="middle" class="label">조기 종료</text>
+    <text x="200" y="54" text-anchor="middle" class="small">검증 오차가 나빠지기 전에 멈춘다</text>
+    <line x1="62" y1="132" x2="342" y2="132" class="axis"/>
+    <line x1="62" y1="72" x2="62" y2="140" class="axis"/>
+    <path d="M72 118 C120 102 166 90 212 86 C252 84 292 94 332 112" class="line orange"/>
+    <path d="M72 116 C128 104 184 94 332 82" class="line blue dash"/>
+    <line x1="212" y1="70" x2="212" y2="136" class="stop"/>
+    <text x="212" y="68" text-anchor="middle" class="small">stop</text>
+    <text x="144" y="154" text-anchor="middle" class="small">epoch</text>
+  </g>
+</svg>

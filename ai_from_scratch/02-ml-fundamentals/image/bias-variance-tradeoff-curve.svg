@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="420" viewBox="0 0 980 420" role="img" aria-labelledby="title desc">
+  <title id="title">편향-분산 트레이드오프</title>
+  <desc id="desc">모델 복잡도가 증가할수록 편향은 줄고 분산은 늘며, 총 오차는 중간 복잡도에서 가장 낮아지는 U자형 곡선</desc>
+  <defs>
+    <style>
+      .title { font: 700 26px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 16px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .axis { stroke: #9aa7bd; stroke-width: 2; }
+      .grid { stroke: #e3e7ef; stroke-width: 1; }
+      .bias { stroke: #3b82c4; stroke-width: 4; fill: none; }
+      .variance { stroke: #d98b24; stroke-width: 4; fill: none; }
+      .total { stroke: #8b5cc7; stroke-width: 5; fill: none; }
+      .noise { stroke: #45a36d; stroke-width: 3; fill: none; stroke-dasharray: 8 7; }
+      .spot { fill: #ffffff; stroke: #172033; stroke-width: 3; }
+      .band { fill: #f1fbf4; stroke: #45a36d; stroke-width: 1.5; rx: 8; }
+    </style>
+  </defs>
+  <rect width="980" height="420" fill="#f7f8fb"/>
+  <text x="490" y="42" text-anchor="middle" class="title">복잡도를 올리면 편향은 줄고 분산은 늘어난다</text>
+
+  <g transform="translate(100 82)">
+    <line x1="0" y1="270" x2="780" y2="270" class="axis"/>
+    <line x1="0" y1="270" x2="0" y2="20" class="axis"/>
+    <line x1="0" y1="210" x2="780" y2="210" class="grid"/>
+    <line x1="0" y1="150" x2="780" y2="150" class="grid"/>
+    <line x1="0" y1="90" x2="780" y2="90" class="grid"/>
+
+    <path d="M30 55 C160 90 270 142 390 196 C520 238 650 256 750 262" class="bias"/>
+    <path d="M30 258 C150 252 270 240 390 214 C520 178 645 100 750 40" class="variance"/>
+    <path d="M30 82 C150 78 270 96 370 134 C455 164 535 174 620 142 C680 116 720 94 750 74" class="total"/>
+    <path d="M30 245 H750" class="noise"/>
+
+    <circle cx="370" cy="134" r="8" class="spot"/>
+    <rect x="295" y="28" width="150" height="42" class="band"/>
+    <text x="370" y="54" text-anchor="middle" class="label">적절한 복잡도</text>
+
+    <text x="30" y="304" text-anchor="middle" class="small">단순함</text>
+    <text x="750" y="304" text-anchor="middle" class="small">복잡함</text>
+    <text x="390" y="326" text-anchor="middle" class="label">모델 복잡도</text>
+    <text x="-48" y="145" transform="rotate(-90 -48 145)" text-anchor="middle" class="label">오차</text>
+
+    <text x="622" y="90" class="label" fill="#8b5cc7">총 오차</text>
+    <text x="84" y="88" class="label" fill="#3b82c4">편향²</text>
+    <text x="622" y="56" class="label" fill="#d98b24">분산</text>
+    <text x="640" y="236" class="label" fill="#45a36d">줄일 수 없는 노이즈</text>
+  </g>
+</svg>
