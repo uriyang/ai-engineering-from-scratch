@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="520" viewBox="0 0 1080 520" role="img" aria-labelledby="title desc">
+  <title id="title">배깅, 부스팅, 스태킹 개념 비교</title>
+  <desc id="desc">배깅은 여러 모델을 병렬로 학습해 평균내고, 부스팅은 모델을 순차적으로 쌓아 오류를 보정하며, 스태킹은 여러 모델의 예측을 메타 모델이 다시 학습하는 흐름을 비교한다.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1,1 L9,5 L1,9 Z" fill="#3f4b63"/>
+    </marker>
+    <style>
+      .bg { fill: #f7f8fb; }
+      .panel { fill: #ffffff; stroke: #d9deea; stroke-width: 1.5; rx: 8; }
+      .title { font: 700 28px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .section { font: 700 21px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .label { font: 700 15px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #172033; }
+      .small { font: 13px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #526078; }
+      .note { font: 700 14px Apple SD Gothic Neo, Noto Sans KR, Arial, sans-serif; fill: #4f5d75; }
+      .data { fill: #eef7ff; stroke: #3b82c4; }
+      .model { fill: #f1fbf4; stroke: #45a36d; }
+      .boost { fill: #fff6e8; stroke: #d98b24; }
+      .meta { fill: #f5efff; stroke: #8b5cc7; }
+      .out { fill: #fff0f3; stroke: #c94f6d; }
+      .edge { stroke: #3f4b63; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .soft { stroke: #8a94a8; stroke-width: 1.6; stroke-dasharray: 5 5; fill: none; marker-end: url(#arrow); }
+      .chip { fill: #eef1f7; stroke: #cfd6e4; rx: 8; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1080" height="520"/>
+  <text class="title" x="540" y="42" text-anchor="middle">앙상블의 세 가지 기본 패턴</text>
+
+  <g transform="translate(35 78)">
+    <rect class="panel" x="0" y="0" width="320" height="390"/>
+    <text class="section" x="160" y="38" text-anchor="middle">배깅</text>
+    <text class="small" x="160" y="62" text-anchor="middle">병렬 모델의 예측을 평균낸다</text>
+
+    <rect class="data" x="98" y="88" width="124" height="44" rx="8"/>
+    <text class="label" x="160" y="115" text-anchor="middle">훈련 데이터</text>
+
+    <rect class="model" x="30" y="178" width="82" height="44" rx="8"/>
+    <text class="label" x="71" y="205" text-anchor="middle">모델 1</text>
+    <rect class="model" x="119" y="178" width="82" height="44" rx="8"/>
+    <text class="label" x="160" y="205" text-anchor="middle">모델 2</text>
+    <rect class="model" x="208" y="178" width="82" height="44" rx="8"/>
+    <text class="label" x="249" y="205" text-anchor="middle">모델 N</text>
+
+    <rect class="meta" x="90" y="274" width="140" height="48" rx="8"/>
+    <text class="label" x="160" y="293" text-anchor="middle">평균 / 다수결</text>
+    <text class="small" x="160" y="313" text-anchor="middle">분산 감소</text>
+
+    <path class="edge" d="M160 132 C95 148 76 160 71 178"/>
+    <path class="edge" d="M160 132 V178"/>
+    <path class="edge" d="M160 132 C225 148 244 160 249 178"/>
+    <path class="edge" d="M71 222 C92 248 118 262 132 274"/>
+    <path class="edge" d="M160 222 V274"/>
+    <path class="edge" d="M249 222 C228 248 202 262 188 274"/>
+
+    <rect class="chip" x="55" y="344" width="210" height="30"/>
+    <text class="note" x="160" y="364" text-anchor="middle">서로 다른 샘플로 다양성 확보</text>
+  </g>
+
+  <g transform="translate(380 78)">
+    <rect class="panel" x="0" y="0" width="320" height="390"/>
+    <text class="section" x="160" y="38" text-anchor="middle">부스팅</text>
+    <text class="small" x="160" y="62" text-anchor="middle">앞 모델의 오류를 다음 모델이 보정한다</text>
+
+    <rect class="data" x="30" y="88" width="96" height="44" rx="8"/>
+    <text class="label" x="78" y="115" text-anchor="middle">데이터</text>
+    <rect class="boost" x="166" y="88" width="96" height="44" rx="8"/>
+    <text class="label" x="214" y="115" text-anchor="middle">모델 1</text>
+
+    <rect class="boost" x="48" y="190" width="96" height="44" rx="8"/>
+    <text class="label" x="96" y="217" text-anchor="middle">모델 2</text>
+    <rect class="boost" x="184" y="190" width="96" height="44" rx="8"/>
+    <text class="label" x="232" y="217" text-anchor="middle">모델 3</text>
+
+    <rect class="meta" x="90" y="286" width="140" height="48" rx="8"/>
+    <text class="label" x="160" y="305" text-anchor="middle">가중합</text>
+    <text class="small" x="160" y="325" text-anchor="middle">편향 감소</text>
+
+    <path class="edge" d="M126 110 H166"/>
+    <path class="edge" d="M214 132 C214 158 154 168 112 190"/>
+    <path class="edge" d="M144 212 H184"/>
+    <path class="edge" d="M96 234 C106 258 126 274 144 286"/>
+    <path class="edge" d="M232 234 C214 260 192 274 176 286"/>
+    <path class="soft" d="M262 110 C298 140 298 190 280 212"/>
+    <text class="small" x="270" y="163" text-anchor="middle">오류 집중</text>
+
+    <rect class="chip" x="55" y="344" width="210" height="30"/>
+    <text class="note" x="160" y="364" text-anchor="middle">순차 보정으로 약한 모델 강화</text>
+  </g>
+
+  <g transform="translate(725 78)">
+    <rect class="panel" x="0" y="0" width="320" height="390"/>
+    <text class="section" x="160" y="38" text-anchor="middle">스태킹</text>
+    <text class="small" x="160" y="62" text-anchor="middle">모델 예측을 새 특징으로 다시 학습한다</text>
+
+    <rect class="data" x="98" y="88" width="124" height="44" rx="8"/>
+    <text class="label" x="160" y="115" text-anchor="middle">훈련 데이터</text>
+
+    <rect class="model" x="28" y="172" width="82" height="44" rx="8"/>
+    <text class="label" x="69" y="199" text-anchor="middle">RF</text>
+    <rect class="model" x="119" y="172" width="82" height="44" rx="8"/>
+    <text class="label" x="160" y="199" text-anchor="middle">SVM</text>
+    <rect class="model" x="210" y="172" width="82" height="44" rx="8"/>
+    <text class="label" x="251" y="199" text-anchor="middle">Linear</text>
+
+    <rect class="out" x="46" y="244" width="228" height="38" rx="8"/>
+    <text class="label" x="160" y="268" text-anchor="middle">예측값을 meta-feature로 변환</text>
+
+    <rect class="meta" x="86" y="314" width="148" height="48" rx="8"/>
+    <text class="label" x="160" y="333" text-anchor="middle">메타 모델</text>
+    <text class="small" x="160" y="353" text-anchor="middle">상황별 조합 학습</text>
+
+    <path class="edge" d="M160 132 C96 144 76 158 69 172"/>
+    <path class="edge" d="M160 132 V172"/>
+    <path class="edge" d="M160 132 C224 144 244 158 251 172"/>
+    <path class="edge" d="M69 216 C82 232 105 238 122 244"/>
+    <path class="edge" d="M160 216 V244"/>
+    <path class="edge" d="M251 216 C238 232 215 238 198 244"/>
+    <path class="edge" d="M160 282 V314"/>
+
+    <rect class="chip" x="48" y="344" width="224" height="30"/>
+    <text class="note" x="160" y="364" text-anchor="middle">out-of-fold 예측으로 누수 방지</text>
+  </g>
+</svg>
