@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640" role="img" aria-labelledby="title desc">
+<title id="title">기능 선택의 세 방법과 검증</title><desc id="desc">훈련 fold에서 필터, 래퍼, 임베디드 방법으로 기능을 선택하고 검증에서 전체 기능 기준선과 비교한다. 고정한 설정만 테스트에서 평가한다.</desc>
+<defs><marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#63758e"/></marker></defs><rect width="1100" height="640" fill="#f7f9fc"/>
+<text x="550" y="43" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="27" font-weight="700" fill="#24334b">기능 선택: 학습 방식과 검증을 함께 본다</text>
+<text x="550" y="80" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="400" fill="#24334b">먼저 데이터를 나누고, 훈련 데이터에서 사용할 입력을 고른다.</text>
+<rect x="315" y="105" width="470" height="65" rx="12" fill="#e8f1ff" stroke="#c6d2e1"/>
+<text x="550.0" y="137" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="600" fill="#24334b">훈련 데이터: 입력을 고르고 모델 학습</text>
+<path d="M550,170 L550,190 L200,190 L200,215" fill="none" stroke="#63758e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M550,170 L550,190 L550,190 L550,215" fill="none" stroke="#63758e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M550,170 L550,190 L900,190 L900,215" fill="none" stroke="#63758e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="40" y="215" width="320" height="125" rx="12" fill="#e8f1ff" stroke="#c6d2e1"/>
+<text x="200.0" y="247" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="600" fill="#24334b">필터: 데이터부터 살펴보기</text>
+<text x="200.0" y="276" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="17" font-weight="400" fill="#24334b">분산 · 상관 · MI · 카이제곱</text>
+<text x="200.0" y="305" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="17" font-weight="400" fill="#24334b">모델 학습 전에 후보를 줄인다</text>
+<rect x="390" y="215" width="320" height="125" rx="12" fill="#fff2df" stroke="#c6d2e1"/>
+<text x="550.0" y="247" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="600" fill="#24334b">래퍼: 바꿔 가며 학습하기</text>
+<text x="550.0" y="276" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="17" font-weight="400" fill="#24334b">RFE · 전진 선택 · 후진 제거</text>
+<text x="550.0" y="305" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="17" font-weight="400" fill="#24334b">입력을 바꾸고 모델을 다시 학습한다</text>
+<rect x="740" y="215" width="320" height="125" rx="12" fill="#e8f6ef" stroke="#c6d2e1"/>
+<text x="900.0" y="247" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="600" fill="#24334b">임베디드: 학습하면서 고르기</text>
+<text x="900.0" y="276" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="17" font-weight="400" fill="#24334b">L1 · 트리 분할 중요도</text>
+<text x="900.0" y="305" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="17" font-weight="400" fill="#24334b">가중치나 분할의 역할을 살펴본다</text>
+<path d="M200,340 L200,370 L550,370 L550,400" fill="none" stroke="#63758e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M550,340 L550,370 L550,370 L550,400" fill="none" stroke="#63758e" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M900,340 L900,370 L550,370 L550,400" fill="none" stroke="#63758e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="245" y="400" width="610" height="90" rx="12" fill="#e8f1ff" stroke="#c6d2e1"/>
+<text x="550.0" y="432" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="600" fill="#24334b">검증 데이터: 훈련에서 고른 입력을 그대로 사용</text>
+<text x="550.0" y="461" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="17" font-weight="400" fill="#24334b">전체 입력을 쓸 때보다 예측이 좋아졌는지 비교</text>
+<path d="M550,490 L550,520" fill="none" stroke="#63758e" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="245" y="520" width="610" height="85" rx="12" fill="#fff2df" stroke="#c6d2e1"/>
+<text x="550.0" y="552" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="19" font-weight="600" fill="#24334b">선택 방법 확정 → 다시 학습 → 최종 테스트</text>
+<text x="550.0" y="581" text-anchor="middle" font-family="Apple SD Gothic Neo,Noto Sans KR,Arial,sans-serif" font-size="17" font-weight="400" fill="#24334b">테스트 정답을 보면서 입력을 고르지 않는다</text>
+</svg>
